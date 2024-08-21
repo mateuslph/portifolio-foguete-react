@@ -1,6 +1,7 @@
 import { Link, Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 import './App.css';
 import Home from './Home/Home';
+import RenderHeader from './RenderHeader/RenderHeader';
 
 function App() {
   return (
@@ -9,7 +10,12 @@ function App() {
         <Link to="/home">Home</Link>
       </nav>
       <Routes>
-        <Route path="/home" element={<Home />} />
+        <Route path="/home" element={
+          <div>
+            <RenderHeader />
+            <Home />
+          </div>
+          } />
       </Routes>
     </Router>
   );

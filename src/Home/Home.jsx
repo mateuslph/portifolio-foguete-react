@@ -3,7 +3,6 @@ import styled, { createGlobalStyle } from 'styled-components';
 const GlobalStyle = createGlobalStyle`
   @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400&display=swap');   
 
-
   body {
     font-family: 'Poppins', sans-serif;   
 
@@ -30,6 +29,7 @@ const ContainerFoguete = styled.div`
     padding: 20px 0;
   }
 `
+
 const CardFoguete = styled.div`
   display: flex;
   margin: 0 20px;
