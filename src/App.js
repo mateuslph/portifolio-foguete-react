@@ -1,6 +1,7 @@
 import { Link, Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 import './App.css';
 import Home from './Home/Home';
+import RenderFooter from './RenderFooter/RenderFooter';
 import RenderHeader from './RenderHeader/RenderHeader';
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
           <div>
             <RenderHeader />
             <Home />
+            <RenderFooter />
           </div>
           } />
       </Routes>
