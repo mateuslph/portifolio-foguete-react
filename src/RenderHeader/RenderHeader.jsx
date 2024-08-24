@@ -16,8 +16,6 @@ const NavBar = styled.nav`
   justify-content: space-between;
   padding: 1.5rem 6rem;
   display: flex;
-  width: 100%;
-  justify-content: space-between;
 
   @media screen and (max-width: 768px) {
     padding: 1.5rem 4rem;

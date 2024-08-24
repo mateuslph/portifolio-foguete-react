@@ -1,11 +1,19 @@
 import styled from 'styled-components';
 import ImageFoguete from '../assets/images/foguete.png';
+import ImageBackgroud from '../assets/images/background-blue-color-square.jpg';
 
 const TodoConteudo = styled.div`
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 `
+
+const ImgBackgroud = styled.div`
+  background-image: url(${ImageBackgroud});
+  background-attachment: fixed;
+  height: 500px;
+`
+
 const ConteinerConteudo = styled.div`
 
 `
@@ -91,7 +99,7 @@ const ReadMore = styled.div`
 function Home() {
   return (
     <TodoConteudo>
-      <section>
+      <ImgBackgroud>
         <ConteinerConteudo>
           <ContainerFoguete>
               <CardFoguete>
@@ -143,7 +151,7 @@ function Home() {
             </CardFoguete>
           </ContainerFoguete>
         </ConteinerConteudo>
-      </section>
+      </ImgBackgroud>
     </TodoConteudo>
   )
 }
