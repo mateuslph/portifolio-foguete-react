@@ -1,15 +1,6 @@
 import React, { useState } from 'react';
-import styled, { createGlobalStyle } from 'styled-components';
-
-const GlobalStyle = createGlobalStyle`
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400&display=swap');
-
-.body {
-  padding: 0;
-  margin: 0;
-  font-family: 'Inter', sans-serif; /* Use Inter as primary, fallback to sans-serif */
-}
-`
+import styled from 'styled-components';
+import ImageLogo from '../assets/images/logo-mlp-tech-art.png';
 
 const StyledHeader = styled.header`
   background-color: #3161C0;
@@ -66,9 +57,7 @@ const UlLi = styled.li`
 
 const NavLink = styled.a`
   text-decoration: none;
-  font-size: 1.15rem;
   color: #fff;
-  font-weight: 400;
 `
 
 const LoginButton = styled.div`
@@ -85,8 +74,8 @@ const Button = styled.button`
   padding: 10px 15px;
   border-radius: 5px;
   background-color: #214289;
-  color: #fff; /* Add text color here */
-  font-size: 1rem; /* Add font size here */
+  color: #fff;
+  font-size: 1rem;
 
   @media screen and (max-width: 768px) {
     width: 100%;
@@ -116,22 +105,22 @@ const MobileMenuIconButton = styled.button`
 `
 
 const MobileMenu = styled.div`
-  display: none; /* Moved styles from media query */
+  display: none;
 `
 
 const MobileMenuUl = styled.ul`
-  display: flex; /* Moved styles from media query */
+  display: flex;
   flex-direction: column;
   text-align: center;
   padding-bottom: 1rem;
 `
 
 const NavItem = styled.li`
-  display: block; /* Moved styles from media query */
+  display: block;
   padding-top: 1.2rem;
 `
 
-function RenderHeader() { // Renamed function
+function RenderHeader() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
   const toggleMobileMenu = () => {
@@ -143,7 +132,7 @@ function RenderHeader() { // Renamed function
       <StyledHeader>
         <NavBar>
           <div className="logo">
-            <LogoImg src="assets/images/logo-mlp-tech-art.png" />
+            <LogoImg src={ImageLogo} />
           </div>
           <NavList>
             <NavListUl>

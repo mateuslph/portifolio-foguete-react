@@ -1,17 +1,5 @@
 import React from 'react';
-import styled, { createGlobalStyle } from 'styled-components';
-
-const GlobalStyle = createGlobalStyle`
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400&display=swap');
-
-.body {
-    font-family: 'Inter', sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    letter-spacing: 1px;
-}
-`
+import styled from 'styled-components';
 
 const StyledFooter = styled.footer`
     width: 100%;
@@ -60,13 +48,13 @@ const FooterLink = styled.a`
     color: #8DB3E2;
     transition: all 0.4s;
 
-    &: hover {
+    &:hover {
         opacity: 0.8;
     }
 `
 
 const FooterLinkI = styled.i`
-    font-size: 1.25rem;
+
 `
 
 const FooterList = styled.ul`
@@ -103,13 +91,12 @@ const InputGroupButton = styled.button`
     border: none;
     color: #E1F0FF;
     padding: 0px 1.25rem;
-    font-size: 1.125rem;
     height: 100%;
     border-radius: 0px 4px 4px 0px;
     cursor: pointer;
     transition: all 0.4s;
 
-    &: hover {
+    &:hover {
         opacity: 0.8;
     }
 `
@@ -118,7 +105,6 @@ const FooterCopyright = styled.div`
     display: flex;
     justify-content: center;
     background-color: #214289;
-    font-size: 0.9rem;
     padding: 1.5rem;
     font-weight: 100;
 `

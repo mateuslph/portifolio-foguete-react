@@ -1,19 +1,10 @@
-import styled, { createGlobalStyle } from 'styled-components';
-
-const GlobalStyle = createGlobalStyle`
-  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400&display=swap');   
-
-  body {
-    font-family: 'Poppins', sans-serif;   
-
-  }
-`
+import styled from 'styled-components';
+import ImageFoguete from '../assets/images/foguete.png';
 
 const TodoConteudo = styled.div`
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;S
 `
 const ConteinerConteudo = styled.div`
 
@@ -105,7 +96,7 @@ function Home() {
           <ContainerFoguete>
               <CardFoguete>
               <ImgBox>
-                <Img className="foguete" src={"foguete.png"} alt="Um foguete" />
+                <Img src={ImageFoguete} alt="Um foguete" />
               </ImgBox>
                   <Content>
                       <h2>Sobre Eu</h2>
@@ -123,7 +114,7 @@ function Home() {
 
             <CardFoguete>
               <ImgBox>
-                <Img className="foguete" src={"foguete.png"} alt="Um foguete" />
+                <Img src={ImageFoguete} alt="Um foguete" />
               </ImgBox>
               <Content>
                   <h2>Meu Currículo</h2>
@@ -138,7 +129,7 @@ function Home() {
 
             <CardFoguete>
               <ImgBox>
-                <Img className="foguete" src={"foguete.png"} alt="Um foguete" />
+                <Img src={ImageFoguete} alt="Um foguete" />
               </ImgBox>
               <Content>
                   <h2>Habilidades</h2>
