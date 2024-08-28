@@ -4,13 +4,13 @@ import ImageLogo from '../assets/images/logo-mlp-tech-art.png';
 
 const StyledHeader = styled.header`
   background-color: #3161C0;
-  box-shadow: 0px 3px 10px #464646;
-  /* Additional styles for the header */
   
   @media screen and (max-width: 768px) {
     /* Add responsive styles here */
   }
-`;
+`
+
+/* Navbar */
 
 const NavBar = styled.nav`
   justify-content: space-between;
@@ -23,10 +23,11 @@ const NavBar = styled.nav`
   }
 `
 
+/* Logo */
+
 const LogoImg = styled.img`
   padding: 8px;
   height: 90px;
-  background-size: cover;
   background-color: #fff;
   border-radius: 35px;
   /* Additional styles for logo */
@@ -37,26 +38,34 @@ const LogoImg = styled.img`
   }
 `
 
+/* List */
+
 const NavList = styled.div`
   display: flex;
   align-items: center;
+  font-size: x-large;
+  text-transform: uppercase;
+  font-weight: 600;
 `
 
 const NavListUl = styled.ul`
   display: flex;
-  justify-content: center;
-  list-style: none;
 `
 
 const UlLi = styled.li`
   align-items: center;
   margin: 0 15px;
+  
+  & :hover {
+    cursor: pointer;
+  }
 `
 
 const NavLink = styled.a`
-  text-decoration: none;
   color: #fff;
 `
+
+/* Button Desktop */
 
 const LoginButton = styled.div`
   display: flex;
@@ -72,8 +81,7 @@ const Button = styled.button`
   padding: 10px 15px;
   border-radius: 5px;
   background-color: #214289;
-  color: #fff;
-  font-size: 1rem;
+  cursor: pointer;
 
   @media screen and (max-width: 768px) {
     width: 100%;
@@ -83,9 +91,11 @@ const Button = styled.button`
 const ButtonAncora = styled.a`
   text-decoration: none;
   color: #fff;
-  font-weight: 500;
   font-size: 1.1rem;
+  text-transform: uppercase;
+  font-family: 'Chakra Petch', sans-serif;
 `
+/* Button Mobile */
 
 const MobileMenuIcon = styled.div`
   display: none;
