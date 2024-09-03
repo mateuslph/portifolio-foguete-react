@@ -2,16 +2,11 @@ import styled from 'styled-components';
 import ImageFoguete from '../assets/images/foguete.png';
 import ImageBackground from '../assets/images/background-blue-color-square.jpg';
 
-const TodoConteudo = styled.div`
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-`
-
 const ImgBackground = styled.div`
   background-image: url(${ImageBackground});
   background-attachment: fixed;
   height: 500px;
+  align-content: center;
 `
 
 const ConteinerConteudo = styled.div`
@@ -22,6 +17,7 @@ const ContainerFoguete = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
 
   @media screen and (max-width: 768px) {
     display: grid;
@@ -43,6 +39,16 @@ const CardFoguete = styled.div`
 
   &:hover {
     height: 400px;
+    & img {
+      position: relative;
+      top: -90px;
+      scale: 0.75;
+      transition: 0.5s all ease-in-out;
+    }
+    & .content {
+      top: 150px;
+      transition: 0.5s all ease-in-out;
+    }
   }
 
   @media screen and (max-width: 768px) {
@@ -56,11 +62,6 @@ const ImgBox = styled.div`
   height: auto;
   top: 0px;
   transition: 0.5s;
-
-  &:hover {
-    top: -100px;
-    scale: 0.75;
-  }
 `
 
 const Img = styled.img`
@@ -74,7 +75,7 @@ const Content = styled.div`
   flex-direction: column;
   gap: 18px;
   position: absolute;
-  top: 250px;
+  top: 260px;
   width: 100%;
   padding: 0px 30px;
   text-align: center;
@@ -98,7 +99,7 @@ const ReadMore = styled.div`
 
 function Home() {
   return (
-    <TodoConteudo>
+    <div className='body'>
       <ImgBackground>
         <ConteinerConteudo>
           <ContainerFoguete>
@@ -152,7 +153,7 @@ function Home() {
           </ContainerFoguete>
         </ConteinerConteudo>
       </ImgBackground>
-    </TodoConteudo>
+    </div>
   )
 }
 
