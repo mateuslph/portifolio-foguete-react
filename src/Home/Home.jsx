@@ -5,7 +5,7 @@ import ImageBackground from '../assets/images/background-blue-color-square.jpg';
 const ImgBackground = styled.div`
   background-image: url(${ImageBackground});
   background-attachment: fixed;
-  height: 500px;
+  height: 600px;
   align-content: center;
 `
 
@@ -16,8 +16,6 @@ const ConteinerConteudo = styled.div`
 const ContainerFoguete = styled.div`
   display: flex;
   justify-content: center;
-  align-items: center;
-  overflow: hidden;
 
   @media screen and (max-width: 768px) {
     display: grid;
@@ -46,6 +44,7 @@ const CardFoguete = styled.div`
       transition: 0.5s all ease-in-out;
     }
     & .content {
+      height: 200px;
       top: 150px;
       transition: 0.5s all ease-in-out;
     }
@@ -57,17 +56,11 @@ const CardFoguete = styled.div`
 `
 
 const ImgBox = styled.div`
-  position: absolute;
-  width: 250px;
-  height: auto;
-  top: 0px;
-  transition: 0.5s;
+
 `
 
 const Img = styled.img`
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: 240px;
 `
 
 const Content = styled.div`
@@ -75,18 +68,13 @@ const Content = styled.div`
   flex-direction: column;
   gap: 18px;
   position: absolute;
-  top: 260px;
-  width: 100%;
+  top: 255px;
+  width: 80%;
   padding: 0px 30px;
   text-align: center;
   height: 30px;
   overflow: hidden;
   transition: 0.5s;
-
-  &:hover {
-    top: 130px;
-    height: 250px;
-  }
 `
 
 const ReadMore = styled.div`
@@ -107,12 +95,10 @@ function Home() {
               <ImgBox>
                 <Img src={ImageFoguete} alt="Um foguete" />
               </ImgBox>
-                  <Content>
+                  <Content className='content'>
                       <h2>Sobre Eu</h2>
                       <p>
-                          Sou Técnico em Desenvolvimento de Sistemas, formado com ênfase à programação Java para o
-                          Back-end
-                          e React para o Front-end.
+                          Formado com ênfase à programação Java para o Back-end e React para o Front-end.
                       </p>
                       <ReadMore>
                           Saiba Mais
@@ -125,7 +111,7 @@ function Home() {
               <ImgBox>
                 <Img src={ImageFoguete} alt="Um foguete" />
               </ImgBox>
-              <Content>
+              <Content className='content'>
                   <h2>Meu Currículo</h2>
                   <p>
                       Jovem elétricamente guiado por astros, <b>freelancer</b> atuante em programação Full-stack.
@@ -140,7 +126,7 @@ function Home() {
               <ImgBox>
                 <Img src={ImageFoguete} alt="Um foguete" />
               </ImgBox>
-              <Content>
+              <Content className='content'>
                   <h2>Habilidades</h2>
                   <p>
                       CI-CD | Vercionamento | Ágile | Orientação a Objetos | Domain-driven Design | Testes
