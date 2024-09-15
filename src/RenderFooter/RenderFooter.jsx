@@ -1,5 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { fab, faFacebook, faInstagram, faWhatsapp } from '@fortawesome/free-brands-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+library.add(fab);
 
 const StyledFooter = styled.footer`
     width: 100%;
@@ -33,7 +37,7 @@ const FooterSocialMedia = styled.div`
     margin-top: 1.5rem;
 `
 
-const FooterLink = styled.a`
+const FooterLink = styled.div`
     text-decoration: none;
 
     display: flex;
@@ -53,8 +57,34 @@ const FooterLink = styled.a`
     }
 `
 
-const FooterLinkI = styled.i`
+const Instagram = styled.div`
+    background: linear-gradient(#7f37c9, #ff2992, #ff9807);
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+`
 
+const Facebook = styled.div`
+    background-color: #4267b3;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+`
+
+const Whatsapp = styled.div`
+    background-color: #25d366;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
 `
 
 const FooterList = styled.ul`
@@ -109,112 +139,88 @@ const FooterCopyright = styled.div`
     font-weight: 100;
 `
 
-const Instagram = styled.div`
-    background: linear-gradient(#7f37c9, #ff2992, #ff9807);
-`
-
-const Facebook = styled.div`
-    background-color: #4267b3;
-`
-
-const Whatsapp = styled.div`
-    background-color: #25d366;
-`
-
 function RenderFooter() {
-  return (
-    <div className='body'>
-    <StyledFooter>
-        <FooterContent>
-            <FooterContactsH1>
-                <h1>Logo</h1>
-                <p>It's all about your dreams.</p>
+    return (
+        <div className='body'>
+            <StyledFooter>
+                <FooterContent>
+                    <FooterContactsH1>
+                        <h1>Logo</h1>
+                        <p>It's all about your dreams.</p>
 
-                <FooterSocialMedia>
-                    <FooterLink>
-                        <Instagram>
-                            <a href="#" id="instagram">
-                                <FooterLinkI>
-                                    <i className="fa-brands fa-instagram"></i>
-                                </FooterLinkI>
-                            </a>
-                        </Instagram>
-                    </FooterLink>
-                    <FooterLink>
-                        <Facebook>
-                            <a href="#" id="facebook">
-                                <FooterLinkI>
-                                    <i className="fa-brands fa-facebook-f"></i>
-                                </FooterLinkI>
-                            </a>
-                        </Facebook>
-                    </FooterLink>
-                    <FooterLink>
-                        <Whatsapp>
-                            <a href="#" id="whatsapp">
-                                <FooterLinkI>
-                                    <i className="fa-brands fa-whatsapp"></i>
-                                </FooterLinkI>
-                            </a>
-                        </Whatsapp>
-                    </FooterLink>
-                </FooterSocialMedia>
-            </FooterContactsH1>
+                        <FooterSocialMedia>
+                            <FooterLink>
+                                <Instagram>
+                                    <FontAwesomeIcon icon={faInstagram} size="2x" />
+                                </Instagram>
+                            </FooterLink>
+                            <FooterLink>
+                                <Facebook>
+                                    <FontAwesomeIcon icon={faFacebook} size="2x" />
+                                </Facebook>
+                            </FooterLink>
+                            <FooterLink>
+                                <Whatsapp>
+                                    <FontAwesomeIcon icon={faWhatsapp} size="2x" />
+                                </Whatsapp>
+                            </FooterLink>
+                        </FooterSocialMedia>
+                    </FooterContactsH1>
 
-            <FooterList>
-                <li>
-                    <h3>Blog</h3>
-                </li>
-                <li>
-                    <a href="#" class="footer-link">Tech</a>
-                </li>
-                <li>
-                    <a href="#" class="footer-link">Adventures</a>
-                </li>
-                <li>
-                    <a href="#" class="footer-link">Music</a>
-                </li>
-            </FooterList>
+                    <FooterList>
+                        <li>
+                            <h3>Blog</h3>
+                        </li>
+                        <li>
+                            <a href="#" class="footer-link">Tech</a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer-link">Adventures</a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer-link">Music</a>
+                        </li>
+                    </FooterList>
 
-            <FooterList>
-                <li>
-                    <h3>Products</h3>
-                </li>
-                <li>
-                    <a href="#" class="footer-link">App</a>
-                </li>
-                <li>
-                    <a href="#" class="footer-link">Desktop</a>
-                </li>
-                <li>
-                    <a href="#" class="footer-link">Cloud</a>
-                </li>
-            </FooterList>
+                    <FooterList>
+                        <li>
+                            <h3>Products</h3>
+                        </li>
+                        <li>
+                            <a href="#" class="footer-link">App</a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer-link">Desktop</a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer-link">Cloud</a>
+                        </li>
+                    </FooterList>
 
-            <FooterSubscribe>
-                <h3>Subscribe</h3>
+                    <FooterSubscribe>
+                        <h3>Subscribe</h3>
 
-                <FooterSubscribeP>
-                    Enter your e-mail to get notified about
-                    our news solutions
-                </FooterSubscribeP>
+                        <FooterSubscribeP>
+                            Enter your e-mail to get notified about
+                            our news solutions
+                        </FooterSubscribeP>
 
-                <InputGroup>
-                    <InputGroupInput type="email" id="email" />
-                    <InputGroupButton>
-                        <i class="fa-regular fa-envelope"></i>
-                    </InputGroupButton>
-                </InputGroup>
-            </FooterSubscribe>
-        </FooterContent>
+                        <InputGroup>
+                            <InputGroupInput type="email" id="email" />
+                            <InputGroupButton>
+                                <i class="fa-regular fa-envelope"></i>
+                            </InputGroupButton>
+                        </InputGroup>
+                    </FooterSubscribe>
+                </FooterContent>
 
-        <FooterCopyright>
-            &#169
-            2023 all rights reserved
-        </FooterCopyright>
-    </StyledFooter>
-    </div>
-  )
+                <FooterCopyright>
+                    &#169
+                    2023 all rights reserved
+                </FooterCopyright>
+            </StyledFooter>
+        </div>
+    )
 }
 
 export default RenderFooter;
