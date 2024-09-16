@@ -77,12 +77,21 @@ const Content = styled.div`
   transition: 0.5s;
 `
 
+const TituloCard = styled.h2`
+  font-weight: 600;
+  font-size: x-large;
+`
+
 const ReadMore = styled.div`
   background: linear-gradient(90deg, #3730a3, #7e22ce);
   padding: 12px;
   color: #fff;
   text-decoration: none;
   border-radius: 8px;
+
+  &:hover {
+    cursor: pointer;
+  }
 `
 
 function Home() {
@@ -96,7 +105,7 @@ function Home() {
                 <Img src={ImageFoguete} alt="Um foguete" />
               </ImgBox>
                   <Content className='content'>
-                      <h2>Sobre Eu</h2>
+                      <TituloCard>Sobre Eu</TituloCard>
                       <p>
                           Formado com ênfase à programação Java para o Back-end e React para o Front-end.
                       </p>
@@ -104,15 +113,14 @@ function Home() {
                           Saiba Mais
                       </ReadMore>
                   </Content>
-              </CardFoguete>
-          
+              </CardFoguete>          
 
             <CardFoguete>
               <ImgBox>
                 <Img src={ImageFoguete} alt="Um foguete" />
               </ImgBox>
               <Content className='content'>
-                  <h2>Meu Currículo</h2>
+                  <TituloCard>Meu Currículo</TituloCard>
                   <p>
                       Jovem elétricamente guiado por astros, <b>freelancer</b> atuante em programação Full-stack.
                   </p>
@@ -127,7 +135,7 @@ function Home() {
                 <Img src={ImageFoguete} alt="Um foguete" />
               </ImgBox>
               <Content className='content'>
-                  <h2>Habilidades</h2>
+                  <TituloCard>Habilidades</TituloCard>
                   <p>
                       CI-CD | Vercionamento | Ágile | Orientação a Objetos | Domain-driven Design | Testes
                   </p>
