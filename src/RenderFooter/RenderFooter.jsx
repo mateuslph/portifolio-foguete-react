@@ -1,8 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
+import ImageLogo from '../assets/images/logo-mlp-tech-art.png';
+import { MdEmail } from 'react-icons/md';
 import { library } from '@fortawesome/fontawesome-svg-core';
-import { fab, faFacebook, faInstagram, faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { fab, faFacebook, faInstagram, faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 library.add(fab);
 
 const StyledFooter = styled.footer`
@@ -31,6 +33,19 @@ const FooterContactsH1 = styled.div`
     margin-bottom: 0.75rem;
 `
 
+const LogoImg = styled.img`
+  padding: 4px;
+  height: 35px;
+  background-color: #fff;
+  border-radius: 20px;
+  margin-bottom: 20px;
+
+  @media screen and (max-width: 768px) {
+    padding: 3px;
+    height: 60px;
+  }
+`
+
 const FooterSocialMedia = styled.div`
     display: flex;
     gap: 2rem;
@@ -39,7 +54,6 @@ const FooterSocialMedia = styled.div`
 
 const FooterLink = styled.div`
     text-decoration: none;
-
     display: flex;
     align-items: center;
     justify-content: center;
@@ -48,12 +62,9 @@ const FooterLink = styled.div`
     color: #E1F0FF;
     border-radius: 50%;
     transition: all 0.4s;
-
-    color: #8DB3E2;
-    transition: all 0.4s;
-
     &:hover {
-        opacity: 0.8;
+        cursor: pointer;
+        opacity: 0.6;
     }
 `
 
@@ -116,19 +127,13 @@ const InputGroupInput = styled.input`
     width: 100%;
 `
 
-const InputGroupButton = styled.button`
-    background-color: #7f37c9;
-    border: none;
-    color: #E1F0FF;
-    padding: 0px 1.25rem;
+const Email = styled.div`
+    display: flex;
+    align-items: center;    
     height: 100%;
-    border-radius: 0px 4px 4px 0px;
-    cursor: pointer;
-    transition: all 0.4s;
-
-    &:hover {
-        opacity: 0.8;
-    }
+    justify-content: center;
+    width: 65px;
+    background-color: #7F37C9;
 `
 
 const FooterCopyright = styled.div`
@@ -145,23 +150,25 @@ function RenderFooter() {
             <StyledFooter>
                 <FooterContent>
                     <FooterContactsH1>
-                        <h1>Logo</h1>
-                        <p>It's all about your dreams.</p>
+                        <div className="logo">
+                            <LogoImg src={ImageLogo} />
+                        </div>
+                        <p>Conheça estratégias de contruir.</p>
 
                         <FooterSocialMedia>
                             <FooterLink>
                                 <Instagram>
-                                    <FontAwesomeIcon icon={faInstagram} size="2x" />
+                                    <FontAwesomeIcon icon={faInstagram} size="2x" href='https://www.google.com/' />
                                 </Instagram>
                             </FooterLink>
                             <FooterLink>
                                 <Facebook>
-                                    <FontAwesomeIcon icon={faFacebook} size="2x" />
+                                    <FontAwesomeIcon icon={faFacebook} size="2x" href='https://www.google.com/' />
                                 </Facebook>
                             </FooterLink>
                             <FooterLink>
                                 <Whatsapp>
-                                    <FontAwesomeIcon icon={faWhatsapp} size="2x" />
+                                    <FontAwesomeIcon icon={faWhatsapp} size="2x" href='https://www.google.com/' />
                                 </Whatsapp>
                             </FooterLink>
                         </FooterSocialMedia>
@@ -169,22 +176,22 @@ function RenderFooter() {
 
                     <FooterList>
                         <li>
-                            <h3>Blog</h3>
+                            <h3>Blogs</h3>
                         </li>
                         <li>
-                            <a href="#" class="footer-link">Tech</a>
+                            <a href="https://umprogramax.wordpress.com/" class="footer-link">MLP Tech</a>
                         </li>
                         <li>
-                            <a href="#" class="footer-link">Adventures</a>
+                            <a href="https://umprogramax.wordpress.com/" class="footer-link">Hobby</a>
                         </li>
                         <li>
-                            <a href="#" class="footer-link">Music</a>
+                            <a href="https://www.youtube.com/@mateuslpy" class="footer-link">Meu Canal Youtube</a>
                         </li>
                     </FooterList>
 
                     <FooterList>
                         <li>
-                            <h3>Products</h3>
+                            <h3>Produtos</h3>
                         </li>
                         <li>
                             <a href="#" class="footer-link">App</a>
@@ -198,25 +205,23 @@ function RenderFooter() {
                     </FooterList>
 
                     <FooterSubscribe>
-                        <h3>Subscribe</h3>
+                        <h3>Inscreva-se</h3>
 
                         <FooterSubscribeP>
-                            Enter your e-mail to get notified about
-                            our news solutions
+                            Informe seu e-mail sara saber sobre novos recursos.
                         </FooterSubscribeP>
 
                         <InputGroup>
                             <InputGroupInput type="email" id="email" />
-                            <InputGroupButton>
-                                <i class="fa-regular fa-envelope"></i>
-                            </InputGroupButton>
+                            <Email>
+                                <MdEmail size={22} color="white" />
+                            </Email>
                         </InputGroup>
                     </FooterSubscribe>
                 </FooterContent>
 
                 <FooterCopyright>
-                    &#169
-                    2023 all rights reserved
+                    <p>&copy; {new Date().getFullYear()} Todos os direitos reservados.</p>
                 </FooterCopyright>
             </StyledFooter>
         </div>
