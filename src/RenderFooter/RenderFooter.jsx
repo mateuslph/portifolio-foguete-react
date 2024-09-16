@@ -134,6 +134,10 @@ const Email = styled.div`
     justify-content: center;
     width: 65px;
     background-color: #7F37C9;
+
+    &:hover {
+        cursor: pointer;
+    }
 `
 
 const FooterCopyright = styled.div`
