@@ -183,13 +183,13 @@ function RenderFooter() {
                             <h3>Blogs</h3>
                         </li>
                         <li>
-                            <a href="https://umprogramax.wordpress.com/" class="footer-link">MLP Tech</a>
+                            <a href="https://umprogramax.wordpress.com/" class="footer-link" target="_blank">MLP Tech</a>
                         </li>
                         <li>
-                            <a href="https://umprogramax.wordpress.com/" class="footer-link">Hobby</a>
+                            <a href="https://umprogramax.wordpress.com/" class="footer-link" target="_blank">Hobby</a>
                         </li>
                         <li>
-                            <a href="https://www.youtube.com/@mateuslpy" class="footer-link">Meu Canal Youtube</a>
+                            <a href="https://www.youtube.com/@mateuslpy" class="footer-link" target="_blank">Meu Canal Youtube</a>
                         </li>
                     </FooterList>
 
