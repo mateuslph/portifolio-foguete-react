@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import ImageLogo from '../assets/images/logo-mlp-tech-art.png';
+import { Link } from 'react-router-dom';
 
 const StyledHeader = styled.header`
   background-color: #3161C0;
@@ -145,10 +146,18 @@ function RenderHeader() {
           <NavList>
             <NavListUl>
               <UlLi>
-                <NavLink onClick={(e) => e.preventDefault()}>Início</NavLink>
+                <NavLink onClick={(e) => e.preventDefault()}>
+                  <nav>
+                    <Link to="/home">Início</Link>
+                  </nav>
+                </NavLink>
               </UlLi>
               <UlLi>
-                <NavLink onClick={(e) => e.preventDefault()}>Projetos</NavLink>
+                <NavLink onClick={(e) => e.preventDefault()}>
+                  <nav>
+                    <Link to="/projects">Projetos</Link>
+                  </nav>
+                </NavLink>
               </UlLi>
               <UlLi>
                 <NavLink onClick={(e) => e.preventDefault()}>Sobre</NavLink>

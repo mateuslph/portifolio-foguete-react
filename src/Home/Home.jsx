@@ -5,7 +5,7 @@ import ImageBackground from '../assets/images/background-blue-color-square.jpg';
 const ImgBackground = styled.div`
   background-image: url(${ImageBackground});
   background-attachment: fixed;
-  height: 600px;
+  height: 800px;
   align-content: center;
 `
 
