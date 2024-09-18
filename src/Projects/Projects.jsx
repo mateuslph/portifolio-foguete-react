@@ -8,17 +8,27 @@ const ImgBackground = styled.div`
   background-image: url(${ImageBackground});
   background-attachment: fixed;
   height: 800px;
-  align-content: center;
 `
 
 const Conteudo = styled.div`
-    min-height: 100vh;
     width: 100%;
     display: inline-flex;
-    justify-content: center;
     align-items: center;
     flex-direction: column;
 `
+
+const TituloPrincipal = styled.h2`    
+    font-size: 40px;
+    color: #E9E9E9;
+    border-bottom: 3px solid #E9E9E9;
+    width: 90%;
+    max-width: 1200px;
+    padding-bottom: 5px;
+    position: relative;
+    top: 40px;
+    margin: 40px 0 120px 0;
+`
+
 const TituloH5 = styled.h5`
     font-size: x-large;
     font-weight: 400;
@@ -74,28 +84,8 @@ const BadgeCss = styled.div`
     font-weight: 800;
 `
 
-const TituloPrincipal = styled.h2`
-    font-size: 40px;
-    color: #E9E9E9;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    border-bottom: 3px solid #E9E9E9;
-    width: 90%;
-    max-width: 1200px;
-    padding-bottom: 5px;
-    position: relative;
-    top: 40px;
-`
-
 const ContainerProjetos = styled.div`
-    display: flex;
-    align-items: center;
-    gap: 16px;
-    flex-wrap: wrap;
-    max-width: 1200px;
-    margin-left: 50px;
-    margin-right: 50px;
-    margin-top: 8%;
-    margin-bottom: 3%;
+
 `
 
 const CardProjetos = styled.div`
@@ -110,7 +100,7 @@ const CardProjetos = styled.div`
 `
 
 const ImgProject = styled.img`
-    height: 286px;
+    height: 285px;
     width: 100%;
     border-radius: 10px 10px 0 0;
 `
@@ -123,7 +113,6 @@ const CardBody = styled.p`
 const IconsProjeto = styled.div`
 display: flex;
 gap: 20px;
-margin-bottom: 6px;
 `
 
 const IconProjeto = styled.div`
@@ -142,7 +131,7 @@ const IconProjeto = styled.div`
 
 function Projects() {
     return (
-        <div className='body'>
+        <div>
             <ImgBackground>
                 <Conteudo>
                     <TituloPrincipal>Projetos</TituloPrincipal>

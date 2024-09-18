@@ -47,22 +47,15 @@ const NavList = styled.div`
   font-size: x-large;
   text-transform: uppercase;
   font-weight: 600;
+  gap: 40px;
 `
 
-const NavListUl = styled.ul`
-  display: flex;
+const NavLink = styled.div`
+
 `
 
-const UlLi = styled.li`
-  align-items: center;
-  margin: 0 15px;
-  
-  & :hover {
-    cursor: pointer;
-  }
-`
-
-const NavLink = styled.a`
+const StyledLink = styled(Link)`
+  text-decoration: none;
   color: #fff;
 `
 
@@ -144,25 +137,15 @@ function RenderHeader() {
             <LogoImg src={ImageLogo} />
           </div>
           <NavList>
-            <NavListUl>
-              <UlLi>
                 <NavLink onClick={(e) => e.preventDefault()}>
-                  <nav>
-                    <Link to="/home">Início</Link>
-                  </nav>
+                  <StyledLink to="/home">Início</StyledLink>
                 </NavLink>
-              </UlLi>
-              <UlLi>
                 <NavLink onClick={(e) => e.preventDefault()}>
-                  <nav>
-                    <Link to="/projects">Projetos</Link>
-                  </nav>
+                  <StyledLink to="/projects">Projetos</StyledLink>
                 </NavLink>
-              </UlLi>
-              <UlLi>
-                <NavLink onClick={(e) => e.preventDefault()}>Sobre</NavLink>
-              </UlLi>
-            </NavListUl>
+                <NavLink onClick={(e) => e.preventDefault()}>
+                  <StyledLink to="/about">Sobre</StyledLink>
+                </NavLink>
           </NavList>
           <LoginButton>
             <Button>

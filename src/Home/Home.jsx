@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import ImageFoguete from '../assets/images/foguete.png';
 import ImageBackground from '../assets/images/background-blue-color-square.jpg';
+import { Link } from 'react-router-dom';
 
 const ImgBackground = styled.div`
   background-image: url(${ImageBackground});
@@ -94,39 +95,35 @@ const ReadMore = styled.div`
   }
 `
 
+const NavLink = styled.div`
+
+`
+
+const StyledLink = styled(Link)`
+  text-decoration: none;
+  color: #fff;
+`
+
 function Home() {
   return (
     <div className='body'>
       <ImgBackground>
         <ConteinerConteudo>
           <ContainerFoguete>
-              <CardFoguete>
-              <ImgBox>
-                <Img src={ImageFoguete} alt="Um foguete" />
-              </ImgBox>
-                  <Content className='content'>
-                      <TituloCard>Sobre Eu</TituloCard>
-                      <p>
-                          Formado com ênfase à programação Java para o Back-end e React para o Front-end.
-                      </p>
-                      <ReadMore>
-                          Saiba Mais
-                      </ReadMore>
-                  </Content>
-              </CardFoguete>          
-
             <CardFoguete>
               <ImgBox>
                 <Img src={ImageFoguete} alt="Um foguete" />
               </ImgBox>
               <Content className='content'>
-                  <TituloCard>Meu Currículo</TituloCard>
-                  <p>
-                      Jovem elétricamente guiado por astros, <b>freelancer</b> atuante em programação Full-stack.
-                  </p>
-                  <ReadMore>
-                      Saiba Mais
-                  </ReadMore>
+                <TituloCard>Sobre Eu</TituloCard>
+                <p>
+                  Formado com ênfase à programação Java para o Back-end e React para o Front-end.
+                </p>
+                <ReadMore>
+                  <NavLink onClick={(e) => e.preventDefault()}>
+                    <StyledLink to="/about">Saiba Mais</StyledLink>
+                  </NavLink>
+                </ReadMore>
               </Content>
             </CardFoguete>
 
@@ -135,13 +132,32 @@ function Home() {
                 <Img src={ImageFoguete} alt="Um foguete" />
               </ImgBox>
               <Content className='content'>
-                  <TituloCard>Habilidades</TituloCard>
-                  <p>
-                      CI-CD | Vercionamento | Ágile | Orientação a Objetos | Domain-driven Design | Testes
-                  </p>
-                  <ReadMore>
-                      Saiba Mais
-                  </ReadMore>
+                <TituloCard>Meu Currículo</TituloCard>
+                <p>
+                  Jovem elétricamente guiado por astros, <b>freelancer</b> atuante em programação Full-stack.
+                </p>
+                <ReadMore>
+                  <NavLink onClick={(e) => e.preventDefault()}>
+                    <StyledLink to="/#">Saiba Mais</StyledLink>
+                  </NavLink>
+                </ReadMore>
+              </Content>
+            </CardFoguete>
+
+            <CardFoguete>
+              <ImgBox>
+                <Img src={ImageFoguete} alt="Um foguete" />
+              </ImgBox>
+              <Content className='content'>
+                <TituloCard>Habilidades</TituloCard>
+                <p>
+                  CI-CD | Vercionamento | Ágile | Orientação a Objetos | Domain-driven Design | Testes
+                </p>
+                <ReadMore>
+                  <NavLink onClick={(e) => e.preventDefault()}>
+                    <StyledLink to="/#">Saiba Mais</StyledLink>
+                  </NavLink>
+                </ReadMore>
               </Content>
             </CardFoguete>
           </ContainerFoguete>
