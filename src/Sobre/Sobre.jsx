@@ -6,14 +6,11 @@ const ImgBackground = styled.div`
   background-image: url(${ImageBackground});
   background-attachment: fixed;
   height: max-content;
-  align-content: center;
 `
 
 const Conteudo = styled.div`
-    min-height: 100vh;
     width: 100%;
-    display: inline-flex;
-    justify-content: center;
+    display: flex;
     align-items: center;
     flex-direction: column;
 `
@@ -28,25 +25,26 @@ const TituloPrincipal = styled.h2`
     position: relative;
     top: 40px;
     margin: 40px 0 120px 0;
+    font-weight: 600;
 `
 
 const CardSobre = styled.div`
-    padding: 40px;
     border: 5px solid #00ffff7f;
     border-radius: 40px;
     text-align: justify;
-    width: 90%;
+    width: 85vw;
     margin-bottom: 60px;
 `
 
 const Subtitulo = styled.h2`
     margin-bottom: 30px;
-    font-weight: 800;
+    font-weight: 600;
     font-size: 2rem;
+    margin: 30px 40px -20px 40px;
 `
 
 const Paragrafo = styled.p`
-    margin-bottom: 20px;
+    margin: 30px 40px 30px 40px;
 `
 
 const ProjetosLi = styled.li`
@@ -64,10 +62,6 @@ const ProjetoLink = styled.a`
     &:hover {
         color: #7f37c9;
     }
-`
-
-const MaisInfo = styled.div`
-
 `
 
 function Sobre() {
@@ -177,7 +171,6 @@ function Sobre() {
                             Banco de dados: MySQL, PostgreSQL
                         </Paragrafo>
 
-
                         <Subtitulo>
                             Alguns dos meus projetos:
                         </Subtitulo>
@@ -196,50 +189,48 @@ function Sobre() {
                                 : Utiliza Storange do navegador.
                             </ProjetosLi>
                         </Paragrafo>
+                    
+                        <Subtitulo>
+                            Portfólio:
+                        </Subtitulo>
 
-                        <MaisInfo>
-                            <Subtitulo>
-                                Portfólio:
-                            </Subtitulo>
+                        <Paragrafo>
+                            Acesse meu portfólio online para ver mais detalhes sobre meus projetos e minhas habilidades:
+                        </Paragrafo>
 
-                            <Paragrafo>
-                                Acesse meu portfólio online para ver mais detalhes sobre meus projetos e minhas habilidades:
-                            </Paragrafo>
+                        <Subtitulo>
+                            Contato:
+                        </Subtitulo>
 
-                            <Subtitulo>
-                                Contato:
-                            </Subtitulo>
+                        <Paragrafo>
+                            E-mail: emelepe@email.com
+                        </Paragrafo>
 
-                            <Paragrafo>
-                                E-mail: emelepe@email.com
-                            </Paragrafo>
+                        <Paragrafo>
+                            Telefone: +55 55 9 9090-8888
+                        </Paragrafo>
 
-                            <Paragrafo>
-                                Telefone: +55 55 9 9090-8888
-                            </Paragrafo>
+                        <Paragrafo>
+                            LinkedIn: https://br.linkedin.com/in/mateus-lunkes-pereira-dev
+                        </Paragrafo>
 
-                            <Paragrafo>
-                                LinkedIn: https://br.linkedin.com/in/mateus-lunkes-pereira-dev
-                            </Paragrafo>
+                        <Paragrafo>
+                            Estou pronto para te ajudar a transformar suas ideias em soluções digitais inovadoras e eficientes!
+                        </Paragrafo>
 
-                            <Paragrafo>
-                                Estou pronto para te ajudar a transformar suas ideias em soluções digitais inovadoras e eficientes!
-                            </Paragrafo>
+                        <Paragrafo>
+                            Observações:
 
-                            <Paragrafo>
-                                Observações:
-
-                                Este é apenas um modelo de documento. Adapte-o à sua realidade, incluindo seus projetos mais
-                                relevantes,
-                                suas habilidades e suas experiências.
-                                Utilize uma linguagem clara, concisa e objetiva.
-                                Destaque seus diferenciais e o que te torna um profissional único.
-                                Apresente seus projetos de forma organizada e com resultados concretos.
-                                Inclua um link para o seu portfólio online, onde os clientes podem ver mais detalhes sobre o seu
-                                trabalho.
-                                Mantenha seu portfólio atualizado com seus projetos mais recentes.
-                            </Paragrafo>
-                        </MaisInfo>
+                            Este é apenas um modelo de documento. Adapte-o à sua realidade, incluindo seus projetos mais
+                            relevantes,
+                            suas habilidades e suas experiências.
+                            Utilize uma linguagem clara, concisa e objetiva.
+                            Destaque seus diferenciais e o que te torna um profissional único.
+                            Apresente seus projetos de forma organizada e com resultados concretos.
+                            Inclua um link para o seu portfólio online, onde os clientes podem ver mais detalhes sobre o seu
+                            trabalho.
+                            Mantenha seu portfólio atualizado com seus projetos mais recentes.
+                        </Paragrafo>
                     </CardSobre>
                 </Conteudo>
             </ImgBackground>

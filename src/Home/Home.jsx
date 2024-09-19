@@ -7,11 +7,13 @@ const ImgBackground = styled.div`
   background-image: url(${ImageBackground});
   background-attachment: fixed;
   height: 800px;
-  align-content: center;
 `
 
-const ConteinerConteudo = styled.div`
-
+const Conteudo = styled.div`
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 `
 
 const ContainerFoguete = styled.div`
@@ -108,7 +110,7 @@ function Home() {
   return (
     <div className='body'>
       <ImgBackground>
-        <ConteinerConteudo>
+        <Conteudo>
           <ContainerFoguete>
             <CardFoguete>
               <ImgBox>
@@ -161,7 +163,7 @@ function Home() {
               </Content>
             </CardFoguete>
           </ContainerFoguete>
-        </ConteinerConteudo>
+        </Conteudo>
       </ImgBackground>
     </div>
   )
