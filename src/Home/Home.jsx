@@ -6,19 +6,21 @@ import { Link } from 'react-router-dom';
 const ImgBackground = styled.div`
   background-image: url(${ImageBackground});
   background-attachment: fixed;
-  height: 800px;
+  height: 550px;
 `
 
 const Conteudo = styled.div`
   width: 100%;
+  height: 100%;
   display: flex;
   align-items: center;
-  flex-direction: column;
+  justify-content: center;
 `
 
 const ContainerFoguete = styled.div`
-  display: flex;
-  justify-content: center;
+  display: inline-flex;
+  align-items: center;
+  height: 100%;
 
   @media screen and (max-width: 768px) {
     display: grid;
@@ -36,19 +38,18 @@ const CardFoguete = styled.div`
   background-color: #fff;
   border-radius: 20px;
   box-shadow: 0px 35px 80px rgba(0, 0, 0, 0.15);
-  transition: 0.5s;
+  transition: 0.5s all ease-in-out;
 
   &:hover {
-    height: 400px;
-    & img {
+    height: 330px;
+    & Img {
       position: relative;
-      top: -90px;
-      scale: 0.75;
-      transition: 0.5s all ease-in-out;
+      transition: 0.5s all ease-out;
+      transform: translateY(-100px) scale(0.75);
     }
     & .content {
       height: 200px;
-      top: 150px;
+      top: 130px;
       transition: 0.5s all ease-in-out;
     }
   }
