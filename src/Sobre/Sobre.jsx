@@ -16,7 +16,7 @@ const Conteudo = styled.div`
 `
 
 const TituloPrincipal = styled.h2`
-    font-size: 40px;
+    font-size: 2.5rem;
     color: #E9E9E9;
     border-bottom: 3px solid #E9E9E9;
     width: 90%;
@@ -26,29 +26,73 @@ const TituloPrincipal = styled.h2`
     top: 40px;
     margin: 40px 0 120px 0;
     font-weight: 600;
+
+    @media screen and (max-width: 768px) {
+        font-size: 1.2rem;
+        padding-bottom: 3px;
+        margin: 20px 0 60px 0;
+        width: 80%;
+        top: 20px;
+    }
 `
 
 const CardSobre = styled.div`
     border: 5px solid #00ffff7f;
     border-radius: 40px;
     text-align: justify;
-    width: 85vw;
     margin-bottom: 60px;
+    padding: 60px 60px 45px 60px;
+    width: 75vw;
+
+    @media screen and (max-width: 768px) {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        font-size: 75%;
+        margin-bottom: 30px;
+        padding: 20px 20px 10px 20px;
+        border-radius: 20px;       
+        width: 75vw;
+    }
+`
+
+const CardSobreCabecalho = styled.div`
+    font-weight: 800;
+    @media screen and (max-width: 768px) {
+        display: flex;
+        flex-wrap: wrap;
+    }
 `
 
 const Subtitulo = styled.h2`
-    margin-bottom: 30px;
     font-weight: 600;
     font-size: 2rem;
-    margin: 30px 40px -20px 40px;
+    margin-bottom: 5px;
+
+    @media screen and (max-width: 768px) {
+        font-size: 1.2rem;
+        margin-bottom: 3px;
+        text-align: center;
+    }
 `
 
 const Paragrafo = styled.p`
-    margin: 30px 40px 30px 40px;
+    margin-bottom: 15px;
+    line-height: 25px;
+
+    @media screen and (max-width: 768px) {
+        margin-bottom: 12px;
+        font-size: smaller;
+        width: 100%;
+        line-height: 15px;
+    }
 `
 
 const ProjetosLi = styled.li`
-
+    @media screen and (max-width: 768px) {
+        text-align: start;
+    }
 `
 
 const ProjetoLink = styled.a`
@@ -77,20 +121,13 @@ function Sobre() {
                 <Conteudo>
                     <TituloPrincipal>Apresentando-se</TituloPrincipal>
                     <CardSobre>
-                        <Paragrafo><b>Nome:</b> Mateus L. Pereira</Paragrafo>
+                        <CardSobreCabecalho>
+                            <Paragrafo>Nome: Mateus L. Pereira</Paragrafo>
 
-                        <Paragrafo><b>Cargo:</b> Técnico em Desenvolvimento de Sistemas, Freelancer Full-stack</Paragrafo>
+                            <Paragrafo>Cargo: Técnico em Desenvolvimento de Sistemas, Freelancer Full-stack</Paragrafo>
 
-                        <Paragrafo><b>Especialidade:</b> Desenvolvimento de páginas web com foco em Domain-Driven Design (DDD)</Paragrafo>
-                        {isMobileMenuOpen && (
-                            <div>
-                                <Paragrafo><b>Nome:</b> Mateus L. Pereira</Paragrafo>
-
-                                <Paragrafo><b>Cargo:</b> Técnico em Desenvolvimento de Sistemas, <br /> Freelancer Full-stack</Paragrafo>
-
-                                <Paragrafo><b>Especialidade:</b> Desenvolvimento de páginas web <br /> com foco em Domain-Driven Design (DDD)</Paragrafo>
-                            </div>
-                        )}
+                            <Paragrafo>Especialidade: Desenvolvimento de páginas web com foco em Domain-Driven Design (DDD)</Paragrafo>
+                        </CardSobreCabecalho>
                     </CardSobre>
 
                     <CardSobre>
@@ -178,15 +215,15 @@ function Sobre() {
                         <Paragrafo>
                             <ProjetosLi>
                                 <ProjetoLink href="https://aluratube-tan-five.vercel.app/" target="_blank"><b>ALURATUBE</b></ProjetoLink>
-                                : Simula o Youtube (<a href="https://www.alura.com.br/">Alura</a>).
+                                : Simula o Youtube (<a href="https://www.alura.com.br/">Alura</a>);
                             </ProjetosLi>
                             <ProjetosLi>
                                 <ProjetoLink href="https://organo-phi-beryl.vercel.app/" target="_blank"><b>ORGANO</b></ProjetoLink>
-                                : Inscrição de cursos.
+                                : Inscrição de cursos;
                             </ProjetosLi>
                             <ProjetosLi>
                                 <ProjetoLink href="https://local-storage-ruddy.vercel.app/" target="_blank"><b>LOCAL STORANGE</b></ProjetoLink>
-                                : Utiliza Storange do navegador.
+                                : Utiliza Storange do navegador;
                             </ProjetosLi>
                         </Paragrafo>
                     
@@ -211,25 +248,15 @@ function Sobre() {
                         </Paragrafo>
 
                         <Paragrafo>
-                            LinkedIn: https://br.linkedin.com/in/mateus-lunkes-pereira-dev
+                            Enderereço: Rua Alvorino Carvalho, N° 101, Bairro Promorar 1, Palmeira das Missões - RS
                         </Paragrafo>
+
+                        <Subtitulo>
+                            Me acompanhe
+                        </Subtitulo>
 
                         <Paragrafo>
                             Estou pronto para te ajudar a transformar suas ideias em soluções digitais inovadoras e eficientes!
-                        </Paragrafo>
-
-                        <Paragrafo>
-                            Observações:
-
-                            Este é apenas um modelo de documento. Adapte-o à sua realidade, incluindo seus projetos mais
-                            relevantes,
-                            suas habilidades e suas experiências.
-                            Utilize uma linguagem clara, concisa e objetiva.
-                            Destaque seus diferenciais e o que te torna um profissional único.
-                            Apresente seus projetos de forma organizada e com resultados concretos.
-                            Inclua um link para o seu portfólio online, onde os clientes podem ver mais detalhes sobre o seu
-                            trabalho.
-                            Mantenha seu portfólio atualizado com seus projetos mais recentes.
                         </Paragrafo>
                     </CardSobre>
                 </Conteudo>

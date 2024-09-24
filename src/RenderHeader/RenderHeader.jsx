@@ -1,14 +1,9 @@
-import React, { useState } from 'react';
 import styled from 'styled-components';
 import ImageLogo from '../assets/images/logo-mlp-tech-art.png';
 import { Link } from 'react-router-dom';
 
 const StyledHeader = styled.header`
   background-color: #3161C0;
-  
-  @media screen and (max-width: 768px) {
-    /* Add responsive styles here */
-  }
 `
 
 /* Navbar */
@@ -18,9 +13,8 @@ const NavBar = styled.nav`
   padding: 1.5rem 6rem;
   display: flex;
 
-  @media screen and (max-width: 768px) {
-    padding: 1.5rem 4rem;
-    align-items: center;
+  @media screen and (max-width: 720px) {
+    display: none;
   }
 `
 
@@ -31,12 +25,6 @@ const LogoImg = styled.img`
   height: 90px;
   background-color: #fff;
   border-radius: 35px;
-  /* Additional styles for logo */
-
-  @media screen and (max-width: 768px) {
-    padding: 3px;
-    height: 60px;
-  }
 `
 
 /* List */
@@ -64,11 +52,6 @@ const StyledLink = styled(Link)`
 const LoginButton = styled.div`
   display: flex;
   align-items: center;
-
-  @media screen and (max-width: 768px) {
-    display: block;
-    padding: 1rem 2rem;
-  }
 `
 const Button = styled.button`
   border: none;
@@ -76,10 +59,6 @@ const Button = styled.button`
   border-radius: 5px;
   background-color: #214289;
   cursor: pointer;
-
-  @media screen and (max-width: 768px) {
-    width: 100%;
-  }
 `
 
 const ButtonAncora = styled.a`
@@ -89,45 +68,19 @@ const ButtonAncora = styled.a`
   text-transform: uppercase;
   font-family: 'Chakra Petch', sans-serif;
 `
-/* Button Mobile */
 
-const MobileMenuIcon = styled.div`
-  display: none;
-
-  @media screen and (max-width: 768px) {
-    display: block;
-  }
-`
-const MobileMenuIconButton = styled.button`
-@media screen and (max-width: 768px) {
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-}
-`
 
 const MobileMenu = styled.div`
-  display: none;
-`
+  width: 40px;
+  height: 40px;
+  background-color: red;
 
-const MobileMenuUl = styled.ul`
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  padding-bottom: 1rem;
-`
-
-const NavItem = styled.li`
-  display: block;
-  padding-top: 1.2rem;
-`
-
-function RenderHeader() {
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
-
-  const toggleMobileMenu = () => {
-    setIsMobileMenuOpen(!isMobileMenuOpen)
+  @media screen and (min-width: 721px) {
+    display: none;
   }
+`
+
+function RenderHeader(isMenuOpen, toggleMobileMenu) {
 
   return (
     <div className="body">
@@ -137,46 +90,24 @@ function RenderHeader() {
             <LogoImg src={ImageLogo} />
           </div>
           <NavList>
-                <NavLink onClick={(e) => e.preventDefault()}>
-                  <StyledLink to="/home">Início</StyledLink>
-                </NavLink>
-                <NavLink onClick={(e) => e.preventDefault()}>
-                  <StyledLink to="/projects">Projetos</StyledLink>
-                </NavLink>
-                <NavLink onClick={(e) => e.preventDefault()}>
-                  <StyledLink to="/about">Sobre</StyledLink>
-                </NavLink>
+            <NavLink onClick={(e) => e.preventDefault()}>
+              <StyledLink to="/home">Início</StyledLink>
+            </NavLink>
+            <NavLink onClick={(e) => e.preventDefault()}>
+              <StyledLink to="/projects">Projetos</StyledLink>
+            </NavLink>
+            <NavLink onClick={(e) => e.preventDefault()}>
+              <StyledLink to="/about">Sobre</StyledLink>
+            </NavLink>
           </NavList>
           <LoginButton>
             <Button>
               <ButtonAncora href="#">Entrar</ButtonAncora>
             </Button>
           </LoginButton>
-
-          <MobileMenuIcon>
-            <MobileMenuIconButton onClick={toggleMobileMenu}>
-              <img className="icon" src="assets/images/menu_white_36dp.svg" alt="Menu" />
-            </MobileMenuIconButton>
-          </MobileMenuIcon>
         </NavBar>
-        {isMobileMenuOpen && (
-          <MobileMenu>
-            <MobileMenuUl>
-              <NavItem>
-                <a href="./index.html" className="nav-link">Início</a>
-              </NavItem>
-              <NavItem>
-                <a href="./projetos.html" className="nav-link">Projetos</a>
-              </NavItem>
-              <NavItem>
-                <a href="./sobre.html" className="nav-link">Sobre</a>
-              </NavItem>
-            </MobileMenuUl>
-            <LoginButton>
-              <Button><a href="#">Entrar</a></Button>
-            </LoginButton>
-          </MobileMenu>
-        )}
+
+       <MobileMenu isMenuOpen={isMenuOpen} toggleMobileMenu={toggleMobileMenu} />
       </StyledHeader>
     </div>
   )

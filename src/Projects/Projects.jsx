@@ -17,8 +17,8 @@ const Conteudo = styled.div`
     flex-direction: column;
 `
 
-const TituloPrincipal = styled.h2`  
-    font-size: 40px;
+const TituloPrincipal = styled.h2`
+    font-size: 2.5rem;
     color: #E9E9E9;
     border-bottom: 3px solid #E9E9E9;
     width: 90%;
@@ -179,7 +179,7 @@ function Projects() {
                                     <BadgeCss>Css</BadgeCss>
                                     <BadgeReact>React</BadgeReact>
                                 </Badge>
-                                <CardBody class="card-text">
+                                <CardBody className="card-text">
                                     Simula uma pagina do YouTube, sendo possível adicionar seus filmes favoritos.
                                     Porém os dados não ficam salvos devido a característica do React
                                 </CardBody>
@@ -207,7 +207,7 @@ function Projects() {
                                     <BadgeCss>Css</BadgeCss>
                                     <BadgeReact>React</BadgeReact>
                                 </Badge>
-                                <CardBody class="card-text">
+                                <CardBody className="card-text">
                                     Simula uma pagina do YouTube, sendo possível adicionar seus filmes favoritos.
                                     Porém os dados não ficam salvos devido a característica do React
                                 </CardBody>
@@ -235,7 +235,7 @@ function Projects() {
                                     <BadgeCss>Css</BadgeCss>
                                     <BadgeReact>React</BadgeReact>
                                 </Badge>
-                                <CardBody class="card-text">
+                                <CardBody className="card-text">
                                     Simula uma pagina do YouTube, sendo possível adicionar seus filmes favoritos.
                                     Porém os dados não ficam salvos devido a característica do React
                                 </CardBody>
@@ -263,7 +263,7 @@ function Projects() {
                                     <BadgeCss>Css</BadgeCss>
                                     <BadgeReact>React</BadgeReact>
                                 </Badge>
-                                <CardBody class="card-text">
+                                <CardBody className="card-text">
                                     Simula uma pagina do YouTube, sendo possível adicionar seus filmes favoritos.
                                     Porém os dados não ficam salvos devido a característica do React
                                 </CardBody>
@@ -291,7 +291,7 @@ function Projects() {
                                     <BadgeCss>Css</BadgeCss>
                                     <BadgeReact>React</BadgeReact>
                                 </Badge>
-                                <CardBody class="card-text">
+                                <CardBody className="card-text">
                                     Simula uma pagina do YouTube, sendo possível adicionar seus filmes favoritos.
                                     Porém os dados não ficam salvos devido a característica do React
                                 </CardBody>

@@ -7,6 +7,9 @@ const ImgBackground = styled.div`
   background-image: url(${ImageBackground});
   background-attachment: fixed;
   height: 550px;
+  @media screen and (max-width: 768px) {
+    height: max-content;
+  }
 `
 
 const Conteudo = styled.div`
@@ -25,6 +28,9 @@ const ContainerFoguete = styled.div`
   @media screen and (max-width: 768px) {
     display: grid;
     padding: 20px 0;
+    gap: 60px;
+    margin-top: 10px;
+    margin-bottom: 40px;
   }
 `
 
@@ -39,6 +45,10 @@ const CardFoguete = styled.div`
   border-radius: 20px;
   box-shadow: 0px 35px 80px rgba(0, 0, 0, 0.15);
   transition: 0.5s all ease-in-out;
+
+  @media screen and (max-width: 768px) {
+    margin: 0;
+  }
 
   &:hover {
     height: 330px;
@@ -141,7 +151,7 @@ function Home() {
                 </p>
                 <ReadMore>
                   <NavLink onClick={(e) => e.preventDefault()}>
-                    <StyledLink to="/#">Saiba Mais</StyledLink>
+                    <StyledLink to="#">Saiba Mais</StyledLink>
                   </NavLink>
                 </ReadMore>
               </Content>
