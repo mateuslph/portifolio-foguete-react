@@ -146,7 +146,7 @@ const LogoImgMobile = styled.img`
   width: auto;
   border-radius: 15px;
   padding: 3px;
-  margin: 10px;
+  margin: 20px;
 `
 
 function RenderHeader() {

@@ -10,6 +10,10 @@ const ImgBackground = styled.div`
   height: max-content;
   display: flex;
   justify-content: center;
+
+  @media screen and (min-width: 769px) and (max-width: 1024px) {
+    height: 900px;
+  }
 `
 
 const Conteudo = styled.div`
