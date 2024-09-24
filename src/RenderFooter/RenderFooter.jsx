@@ -4,7 +4,8 @@ import ImageLogo from '../assets/images/logo-mlp-tech-art.png';
 import { MdEmail } from 'react-icons/md';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { fab, faFacebook, faInstagram, faWhatsapp } from '@fortawesome/free-brands-svg-icons';
+import { fab, faFacebook, faInstagram, faWhatsapp, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import { LiaLinkedin } from 'react-icons/lia';
 library.add(fab);
 
 const StyledFooter = styled.footer`
@@ -68,34 +69,32 @@ const FooterLink = styled.div`
     }
 `
 
-const Instagram = styled.div`
-    background: linear-gradient(#7f37c9, #ff2992, #ff9807);
+const IconSocial = styled.a`
     width: 40px;
     height: 40px;
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 8px;
-`
+    color: #FFF;
+    border: solid #4253d3 1px;
+    box-shadow: 2px 2px 2px #2c4cce;
 
-const Facebook = styled.div`
-    background-color: #4267b3;
-    width: 40px;
-    height: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 8px;
-`
+    &.instagram {
+        background: linear-gradient(#7f37c9, #ff2992, #ff9807);
+    }
 
-const Whatsapp = styled.div`
-    background-color: #25d366;
-    width: 40px;
-    height: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 8px;
+    &.facebook {
+        background-color: #4267b3;
+    }
+
+    &.whatsapp {
+        background-color: #25d366;
+    }
+
+    &.linkedin {
+        background-color: #0270AD;
+    }
 `
 
 const FooterList = styled.ul`
@@ -161,19 +160,25 @@ function RenderFooter() {
 
                         <FooterSocialMedia>
                             <FooterLink>
-                                <Instagram>
-                                    <FontAwesomeIcon icon={faInstagram} size="2x" href='https://www.google.com/' />
-                                </Instagram>
+                                <IconSocial className='instagram' href='https://www.instagram.com/lunkespereira/?next=%2F' target="_blank" rel="noopener noreferrer">
+                                    <FontAwesomeIcon icon={faInstagram} size="2x"/>
+                                </IconSocial>                            
+                            </FooterLink>
+
+                            <FooterLink>
+                                <IconSocial className='facebook' href='https://www.facebook.com/mateus.lunkespereira' target="_blank" rel="noopener noreferrer">
+                                    <FontAwesomeIcon icon={faFacebook} size="2x" />
+                                </IconSocial>
                             </FooterLink>
                             <FooterLink>
-                                <Facebook>
-                                    <FontAwesomeIcon icon={faFacebook} size="2x" href='https://www.google.com/' />
-                                </Facebook>
+                                <IconSocial className='whatsapp'  href='https://wa.me/5555999480809' target="_blank" rel="noopener noreferrer">
+                                    <FontAwesomeIcon icon={faWhatsapp} size="2x" />
+                                </IconSocial>
                             </FooterLink>
                             <FooterLink>
-                                <Whatsapp>
-                                    <FontAwesomeIcon icon={faWhatsapp} size="2x" href='https://www.google.com/' />
-                                </Whatsapp>
+                                <IconSocial className='linkedin' href='https://www.linkedin.com/in/mateus-lunkes-pereira-dev/' target="_blank" rel="noopener noreferrer">
+                                    <FontAwesomeIcon icon={faLinkedin} size="2x" />
+                                </IconSocial>
                             </FooterLink>
                         </FooterSocialMedia>
                     </FooterContactsH1>

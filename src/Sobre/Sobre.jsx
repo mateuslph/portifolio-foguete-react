@@ -28,7 +28,7 @@ const TituloPrincipal = styled.h2`
     font-weight: 600;
 
     @media screen and (max-width: 768px) {
-        font-size: 1.2rem;
+        font-size: x-large;
         padding-bottom: 3px;
         margin: 20px 0 60px 0;
         width: 80%;
@@ -71,7 +71,7 @@ const Subtitulo = styled.h2`
     margin-bottom: 5px;
 
     @media screen and (max-width: 768px) {
-        font-size: 1.2rem;
+        font-size: x-large;
         margin-bottom: 3px;
         text-align: center;
     }
@@ -83,7 +83,7 @@ const Paragrafo = styled.p`
 
     @media screen and (max-width: 768px) {
         margin-bottom: 12px;
-        font-size: smaller;
+        font-size: larger;
         width: 100%;
         line-height: 15px;
     }
@@ -109,11 +109,7 @@ const ProjetoLink = styled.a`
 `
 
 function Sobre() {
-    const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
-
-    const toggleMobileMenu = () => {
-        setIsMobileMenuOpen(!isMobileMenuOpen)
-    }
+    const [isMobileMenuOpen] = useState(false)
 
     return (
         <div>

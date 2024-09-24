@@ -28,6 +28,14 @@ const TituloPrincipal = styled.h2`
     top: 40px;
     margin: 40px 0 120px 0;
     font-weight: 600;
+
+    @media screen and (max-width: 768px) {
+        font-size: x-large;
+        padding-bottom: 3px;
+        margin: 20px 0 60px 0;
+        width: 80%;
+        top: 20px;
+    }
 `
 
 const ContainerProjetos = styled.div`
