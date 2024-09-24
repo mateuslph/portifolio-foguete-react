@@ -5,11 +5,12 @@ import ImageBackground from '../assets/images/background-blue-color-square.jpg';
 const ImgBackground = styled.div`
   background-image: url(${ImageBackground});
   background-attachment: fixed;
-  height: max-content;  
+  height: max-content;
 
-  @media screen and (min-width: 769px) and (max-width: 1024px) {
-    height: 900px;
-  }
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  min-height: 900px;
+  height: max-content;
+}
 `
 
 const Conteudo = styled.div`

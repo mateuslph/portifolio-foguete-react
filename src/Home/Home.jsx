@@ -12,7 +12,8 @@ const ImgBackground = styled.div`
   justify-content: center;
 
   @media screen and (min-width: 769px) and (max-width: 1024px) {
-    height: 900px;
+    min-height: 900px;
+    height: max-content;
   }
 `
 

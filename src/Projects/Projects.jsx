@@ -7,11 +7,12 @@ import ImageBackground from '../assets/images/background-blue-color-square.jpg';
 const ImgBackground = styled.div`
   background-image: url(${ImageBackground});
   background-attachment: fixed;
-  height: max-content;  
+  height: max-content;
 
-  @media screen and (min-width: 769px) and (max-width: 1024px) {
-    height: 900px;
-  }
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  min-height: 900px;
+  height: max-content;
+}
 `
 
 const Conteudo = styled.div`
@@ -102,7 +103,6 @@ const BadgeHtml = styled.div`
     font-weight: 800;
 `
 
-
 const BadgeCss = styled.div`    
     display: flex;
     justify-content: center;
@@ -166,6 +166,118 @@ function Projects() {
                                 <CardBody>
                                     Simula uma pagina do YouTube, sendo possível adicionar seus filmes favoritos.
                                     Porém os dados não ficam salvos devido a característica do React.
+                                </CardBody>
+                                <IconsProjeto>
+                                    <a href="https://aluratube-tan-five.vercel.app/" target="_blank" rel="noopener noreferrer">
+                                        <IconProjeto>
+                                            <CiGlobe size={32} color="white" />
+                                        </IconProjeto>
+                                    </a>
+                                    <a href="https://github.com/mateuslph/aluratube" target="_blank" rel="noopener noreferrer">
+                                        <IconProjeto>
+                                            <FaGithub size={32} color="white" />
+                                        </IconProjeto>
+                                    </a>
+                                </IconsProjeto>
+                            </CardText>
+                        </CardProjetos>
+
+                        <CardProjetos>
+                            <ImgProject src={ImageAluraTube} />
+                            <CardText>
+                                <TituloH5>AluraTube</TituloH5>
+                                <Badge>
+                                    <BadgeHtml>Html5</BadgeHtml>
+                                    <BadgeCss>Css</BadgeCss>
+                                    <BadgeReact>React</BadgeReact>
+                                </Badge>
+                                <CardBody className="card-text">
+                                    Simula uma pagina do YouTube, sendo possível adicionar seus filmes favoritos.
+                                    Porém os dados não ficam salvos devido a característica do React
+                                </CardBody>
+                                <IconsProjeto>
+                                    <a href="https://aluratube-tan-five.vercel.app/" target="_blank" rel="noopener noreferrer">
+                                        <IconProjeto>
+                                            <CiGlobe size={32} color="white" />
+                                        </IconProjeto>
+                                    </a>
+                                    <a href="https://github.com/mateuslph/aluratube" target="_blank" rel="noopener noreferrer">
+                                        <IconProjeto>
+                                            <FaGithub size={32} color="white" />
+                                        </IconProjeto>
+                                    </a>
+                                </IconsProjeto>
+                            </CardText>
+                        </CardProjetos>
+
+                        <CardProjetos>
+                            <ImgProject src={ImageAluraTube} />
+                            <CardText>
+                                <TituloH5>AluraTube</TituloH5>
+                                <Badge>
+                                    <BadgeHtml>Html5</BadgeHtml>
+                                    <BadgeCss>Css</BadgeCss>
+                                    <BadgeReact>React</BadgeReact>
+                                </Badge>
+                                <CardBody className="card-text">
+                                    Simula uma pagina do YouTube, sendo possível adicionar seus filmes favoritos.
+                                    Porém os dados não ficam salvos devido a característica do React
+                                </CardBody>
+                                <IconsProjeto>
+                                    <a href="https://aluratube-tan-five.vercel.app/" target="_blank" rel="noopener noreferrer">
+                                        <IconProjeto>
+                                            <CiGlobe size={32} color="white" />
+                                        </IconProjeto>
+                                    </a>
+                                    <a href="https://github.com/mateuslph/aluratube" target="_blank" rel="noopener noreferrer">
+                                        <IconProjeto>
+                                            <FaGithub size={32} color="white" />
+                                        </IconProjeto>
+                                    </a>
+                                </IconsProjeto>
+                            </CardText>
+                        </CardProjetos>
+
+                        <CardProjetos>
+                            <ImgProject src={ImageAluraTube} />
+                            <CardText>
+                                <TituloH5>AluraTube</TituloH5>
+                                <Badge>
+                                    <BadgeHtml>Html5</BadgeHtml>
+                                    <BadgeCss>Css</BadgeCss>
+                                    <BadgeReact>React</BadgeReact>
+                                </Badge>
+                                <CardBody className="card-text">
+                                    Simula uma pagina do YouTube, sendo possível adicionar seus filmes favoritos.
+                                    Porém os dados não ficam salvos devido a característica do React
+                                </CardBody>
+                                <IconsProjeto>
+                                    <a href="https://aluratube-tan-five.vercel.app/" target="_blank" rel="noopener noreferrer">
+                                        <IconProjeto>
+                                            <CiGlobe size={32} color="white" />
+                                        </IconProjeto>
+                                    </a>
+                                    <a href="https://github.com/mateuslph/aluratube" target="_blank" rel="noopener noreferrer">
+                                        <IconProjeto>
+                                            <FaGithub size={32} color="white" />
+                                        </IconProjeto>
+                                    </a>
+                                </IconsProjeto>
+                            </CardText>
+                        </CardProjetos>
+
+                        <CardProjetos>
+                            <ImgProject src={ImageAluraTube} />
+                            <CardText>
+                                <TituloH5>AluraTube</TituloH5>
+                                <Badge>
+                                    <BadgeHtml>Html5</BadgeHtml>
+                                    <BadgeCss>Css</BadgeCss>
+                                    <BadgeReact>React</BadgeReact>
+                                </Badge>
+                                <CardBody className="card-text">
+                                    Simula uma pagina do YouTube, sendo possível adicionar seus filmes favoritos.
+                                    Porém os dados não ficam salvos devido a característica do React
                                 </CardBody>
                                 <IconsProjeto>
                                     <a href="https://aluratube-tan-five.vercel.app/" target="_blank" rel="noopener noreferrer">
