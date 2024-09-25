@@ -89,6 +89,7 @@ const MenuMobile = styled.div`
   background: no-repeat;
   height: 40px;
   width: 40px;
+  margin-left: 15px;
   margin-top: 18px;
 
   &.open {
@@ -212,6 +213,5 @@ function RenderHeader() {
     </div>
   )
 }
-
 
 export default RenderHeader;

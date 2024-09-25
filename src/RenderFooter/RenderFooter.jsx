@@ -5,7 +5,6 @@ import { MdEmail } from 'react-icons/md';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { fab, faFacebook, faInstagram, faWhatsapp, faLinkedin } from '@fortawesome/free-brands-svg-icons';
-import { LiaLinkedin } from 'react-icons/lia';
 library.add(fab);
 
 const StyledFooter = styled.footer`
@@ -32,6 +31,13 @@ const FooterContent = styled.div`
 
 const FooterContactsH1 = styled.div`
     margin-bottom: 0.75rem;
+    margin-right: 1.8rem;
+`
+
+const TextoLogo = styled.div`    
+@media screen and (max-width: 1024px) {
+    display: none;
+}
 `
 
 const LogoImg = styled.img`
@@ -47,10 +53,28 @@ const LogoImg = styled.img`
   }
 `
 
+const TituloFooter = styled.h3`
+    color: #fff;
+    font-size: large;
+    font-weight: 500;
+    width: 100%;
+
+    &.redes-sociais {
+        @media screen and (min-width: 1024px) {
+            display: none;
+        }
+    }
+`
+
 const FooterSocialMedia = styled.div`
     display: flex;
     gap: 2rem;
     margin-top: 1.5rem;
+    flex-wrap: wrap;
+
+    @media screen and (max-width: 1024px) {
+        margin-top: 0;
+    }
 `
 
 const FooterLink = styled.div`
@@ -99,6 +123,7 @@ const IconSocial = styled.a`
 
 const FooterList = styled.ul`
     display: flex;
+    margin-right: 1.8rem;
     flex-direction: column;
     gap: 0.75rem;
     list-style: none;
@@ -153,12 +178,15 @@ function RenderFooter() {
             <StyledFooter>
                 <FooterContent>
                     <FooterContactsH1>
-                        <div className="logo">
-                            <LogoImg src={ImageLogo} />
-                        </div>
-                        <p>Conheça estratégias de contruir.</p>
+                        <TextoLogo>
+                            <div className="logo">
+                                <LogoImg src={ImageLogo} />
+                            </div>
+                            <p>Conheça estratégias de contruir.</p>
+                        </TextoLogo>
 
                         <FooterSocialMedia>
+                            <TituloFooter className='redes-sociais'>Redes Sociais</TituloFooter>
                             <FooterLink>
                                 <IconSocial className='instagram' href='https://www.instagram.com/lunkespereira/?next=%2F' target="_blank" rel="noopener noreferrer">
                                     <FontAwesomeIcon icon={faInstagram} size="2x"/>
@@ -185,7 +213,7 @@ function RenderFooter() {
 
                     <FooterList>
                         <li>
-                            <h3>Blogs</h3>
+                            <TituloFooter>Blogs</TituloFooter>
                         </li>
                         <li>
                             <a href="https://umprogramax.wordpress.com/" class="footer-link" target="_blank">MLP Tech</a>
@@ -200,7 +228,7 @@ function RenderFooter() {
 
                     <FooterList>
                         <li>
-                            <h3>Produtos</h3>
+                            <TituloFooter>Produtos</TituloFooter>
                         </li>
                         <li>
                             <a href="#" class="footer-link">App</a>
@@ -214,7 +242,7 @@ function RenderFooter() {
                     </FooterList>
 
                     <FooterSubscribe>
-                        <h3>Inscreva-se</h3>
+                        <TituloFooter>Inscreva-se</TituloFooter>
 
                         <FooterSubscribeP>
                             Informe seu e-mail sara saber sobre novos recursos.
