@@ -78,19 +78,22 @@ const NavMobile = styled.div`
   display: none;
 
   @media screen and (max-width: 768px) {
-    display: flex;
-    justify-content: space-between;
-    padding: 12px
+    display: inline;
+    padding: 12px;
   } 
+`
+
+const HeaderMobile = styled.div`
+  display: flex;
+  justify-content: space-between;
 `
 
 const MenuMobile = styled.div`
   display: flex;
+  width: 35px;
   background: no-repeat;
-  height: 40px;
-  width: 40px;
-  margin-left: 15px;
-  margin-top: 18px;
+  margin: 25px 22px;
+  background-position: center;
 
   &.open {
     background-image: url(${IconMobileOpen});
@@ -105,8 +108,6 @@ const ColunaMobile = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100%;
-  margin: 10px 0;
 `
 
 const MobileMenuUl = styled.ul`
@@ -136,7 +137,6 @@ const TituloPagina = styled.h3`
   display: flex;
   align-items: center;
   text-align: center;
-  flex-wrap: wrap;
   color: #fff;
   font-size: x-large;
   text-transform: uppercase;
@@ -184,7 +184,13 @@ function RenderHeader() {
         </NavBar>
 
         <NavMobile >
+          <HeaderMobile>
           <MenuMobile onClick={toggleMenu} className={isOpen ? 'open' : 'close'}></MenuMobile>
+          <TituloPagina >Portifólio</TituloPagina>
+          <div className="logo">
+            <LogoImgMobile src={ImageLogo} />
+          </div>
+          </HeaderMobile>
           {isOpen && (
             <ColunaMobile>
               <MobileMenuUl>
@@ -203,11 +209,6 @@ function RenderHeader() {
               </MobileMenuUl>
             </ColunaMobile>
           )}
-          {isOpen ? null : 
-            <TituloPagina >Portifólio Foguete</TituloPagina>}
-          <div className="logo">
-            <LogoImgMobile src={ImageLogo} />
-          </div>
         </NavMobile>
       </StyledHeader>
     </div>
