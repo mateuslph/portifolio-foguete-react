@@ -79,13 +79,13 @@ const NavMobile = styled.div`
 
   @media screen and (max-width: 768px) {
     display: inline;
-    padding: 12px;
   } 
 `
 
 const HeaderMobile = styled.div`
   display: flex;
   justify-content: space-between;
+  padding: 0 20px;
 `
 
 const MenuMobile = styled.div`
@@ -108,6 +108,8 @@ const ColunaMobile = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 10px 0;
+  border-top: solid 5px #4A8DCB;
 `
 
 const MobileMenuUl = styled.ul`
@@ -152,10 +154,14 @@ const LogoImgMobile = styled.img`
 
 function RenderHeader() {
 
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false)
 
   const toggleMenu = () => {
-    setIsOpen(!isOpen);
+    setIsOpen(!isOpen)
+  }
+
+  const handleLinkClick = () => {
+    setIsOpen(false)
   }
 
   return (
@@ -185,25 +191,25 @@ function RenderHeader() {
 
         <NavMobile >
           <HeaderMobile>
-          <MenuMobile onClick={toggleMenu} className={isOpen ? 'open' : 'close'}></MenuMobile>
-          <TituloPagina >Portifólio</TituloPagina>
-          <div className="logo">
-            <LogoImgMobile src={ImageLogo} />
-          </div>
+            <MenuMobile onClick={toggleMenu} className={isOpen ? 'open' : 'close'}></MenuMobile>
+            <TituloPagina >Portifólio</TituloPagina>
+            <div className="logo">
+              <LogoImgMobile src={ImageLogo} />
+            </div>
           </HeaderMobile>
           {isOpen && (
             <ColunaMobile>
               <MobileMenuUl>
-                <NavItem onClick={(e) => e.preventDefault()}>
+              <NavItem onClick={() => { handleLinkClick() }}>
                   <StyledLinkMobile to="/home">Home</StyledLinkMobile>
                 </NavItem>
-                <NavItem onClick={(e) => e.preventDefault()}>
+                <NavItem onClick={() => { handleLinkClick() }}>
                   <StyledLinkMobile to="/projects">Projetos</StyledLinkMobile>
                 </NavItem>
-                <NavItem onClick={(e) => e.preventDefault()}>
+                <NavItem onClick={() => { handleLinkClick() }}>
                   <StyledLinkMobile to="/about">Sobre</StyledLinkMobile>
                 </NavItem>
-                <NavItem onClick={(e) => e.preventDefault()}>
+                <NavItem onClick={() => { handleLinkClick() }}>
                   <StyledLinkMobile to="/home">Entrar</StyledLinkMobile>
                 </NavItem>
               </MobileMenuUl>
