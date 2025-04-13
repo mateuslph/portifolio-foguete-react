@@ -1,22 +1,22 @@
-import Home from './Home/Home';
-import Projects from './Projects/Projects';
-import RenderFooter from './RenderFooter/RenderFooter';
-import RenderHeader from './RenderHeader/RenderHeader';
-import Sobre from './Sobre/Sobre';
+import Home from './Components/Home';
+import Projects from './Components/Projects';
+import Footer from './Components/Footer';
+import Header from './Components/Header';
+import About from './Components/About';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 
 function App() {
   return (
     <div className="app">
       <BrowserRouter>
-        <RenderHeader />
-        <Routes>
+        <Header />
+        <Routes>          
           <Route path="/" element={<Navigate to="/home" />} />      
           <Route path="/home" element={<Home />} />
           <Route path="/projects" element={<Projects />} />
-          <Route path="/about" element={<Sobre />} />
+          <Route path="/about" element={<About />} />
          </Routes>
-        <RenderFooter />
+        <Footer />
       </BrowserRouter>
     </div>
   )
