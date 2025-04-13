@@ -96,7 +96,7 @@ const FooterSocialMedia = styled.div`
 `;
 
 // Estilização dos links do rodapé.
-const FooterLink = styled.div`
+const FooterLink = styled.a`
     text-decoration: none;
     display: flex;
     align-items: center;
@@ -220,26 +220,25 @@ function RenderFooter() {
                            {/* Link para o Instagram. */}
                             <FooterLink >
                                 <IconSocial className='instagram' href='https://www.instagram.com/lunkespereira/?next=%2F' target="_blank" rel="noopener noreferrer">
-                                    <FontAwesomeIcon icon={faInstagram} size="2x"/>
+                                  <FontAwesomeIcon icon={faInstagram} size="2x"/>
                                 </IconSocial>
                              </FooterLink>
-
                              {/* Link para o Facebook. */}
                             <FooterLink >
                                 <IconSocial className='facebook' href='https://www.facebook.com/mateus.lunkespereira' target="_blank" rel="noopener noreferrer">
-                                    <FontAwesomeIcon icon={faFacebook} size="2x" />
+                                  <FontAwesomeIcon icon={faFacebook} size="2x" />
                                 </IconSocial>
                             </FooterLink>
                              {/* Link para o WhatsApp. */}
                             <FooterLink >
                                 <IconSocial className='whatsapp'  href='https://wa.me/5555999480809' target="_blank" rel="noopener noreferrer">
-                                    <FontAwesomeIcon icon={faWhatsapp} size="2x" />
+                                  <FontAwesomeIcon icon={faWhatsapp} size="2x" />
                                 </IconSocial>
                             </FooterLink>
                              {/* Link para o LinkedIn. */}
                             <FooterLink >
                                 <IconSocial className='linkedin' href='https://www.linkedin.com/in/mateus-lunkes-pereira-dev/' target="_blank" rel="noopener noreferrer">
-                                    <FontAwesomeIcon icon={faLinkedin} size="2x" />
+                                  <FontAwesomeIcon icon={faLinkedin} size="2x" />
                                 </IconSocial>
                             </FooterLink>
                         </FooterSocialMedia>
@@ -269,13 +268,13 @@ function RenderFooter() {
                         <li>
                             <StyledFooterTitle>Produtos</StyledFooterTitle>
                          </li>
-                        <li> <a href="#" className="footer-link">App</a>
+                        <li> <a href="/#" className="footer-link">App</a>
                         </li>
                         <li>
-                            <a href="#" className="footer-link">Desktop</a>
+                            <a href="/#" className="footer-link">Desktop</a>
                         </li>
                         <li>
-                            <a href="#" className="footer-link">Cloud</a>
+                            <a href="/#" className="footer-link">Cloud</a>
                         </li>
                     </FooterList>
                     </div>

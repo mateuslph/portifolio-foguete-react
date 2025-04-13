@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import ProjectCard from "./ProjectCard";
 import ImageBackground from "../assets/images/background-blue-color-square.jpg";
-import ImageAluraTube from "../assets/images/image-aluratube.jpg"; // Ajuste esse caminho conforme necessário
+import ImageAluraTube from "../assets/images/screencapture-aluratube.png";
 import { v4 as uuidv4 } from "uuid";
 
 const Background = styled.div.attrs((props) => ({
@@ -45,7 +45,7 @@ function Projects() {
   const projectsData = [
     {
       id: uuidv4(),
-      image: ImageAluraTube,
+      image: ImageAluraTube, // Updated to the correct image
       badgeHtml: "Html5",
       badgeCss: "Css",
       badgeReact: "React",
@@ -92,7 +92,7 @@ function Projects() {
     },
     {
       id: uuidv4(),
-      image: ImageAluraTube,
+      image: ImageAluraTube, // Updated to the correct image
       title: "AluraTube 10",
       badgeHtml: "Html5",
       badgeCss: "Css",
