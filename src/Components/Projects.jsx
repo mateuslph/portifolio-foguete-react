@@ -1,19 +1,13 @@
 import styled from "styled-components";
 import ProjectCard from './ProjectCard';
 import ImageBackground from '../assets/images/background-blue-color-square.jpg';
-import ImageAluraTube from '../assets/images/screencapture-aluratube.png';
 import { v4 as uuidv4 } from 'uuid';
 
-const ImgBackground = styled.div`
-  background-image: url(${ImageBackground});
+const Background = styled.div.attrs(props => ({
+  style: { backgroundImage: `url(${props.image || ImageBackground})` }
+}))`
   background-attachment: fixed;
-  height: max-content;
-
-  @media screen and (min-width: 769px) and (max-width: 1024px) {
-    min-height: 900px;
-    height: max-content;
-  }
-`;
+  height: 100vh;
 
 const Conteudo = styled.div`
   width: 100%;
@@ -30,17 +24,9 @@ const TituloPrincipal = styled.h2`
   max-width: 1200px;
   padding-bottom: 5px;
   position: relative;
-  top: 40px;
-  margin: 40px 0 120px 0;
+  margin: 80px 0 120px 0;
   font-weight: 600;
-
-  @media screen and (max-width: 768px) {
-    font-size: x-large;
-    padding-bottom: 3px;
-    margin: 20px 0 60px 0;
-    width: 80%;
-    top: 20px;
-  }
+`;
 `;
 
 const ContainerProjetos = styled.div`
@@ -57,7 +43,6 @@ function Projects() {
     {
       id: uuidv4(),
       image: ImageAluraTube,
-      title: "AluraTube 1",
       badgeHtml: "Html5",
       badgeCss: "Css",
       badgeReact: "React",
@@ -65,36 +50,30 @@ function Projects() {
       liveLink: "https://aluratube-tan-five.vercel.app/",
       githubLink: "https://github.com/mateuslph/aluratube",
     },
+
     {
-      id: uuidv4(),
-      image: ImageAluraTube,
-      title: "AluraTube 2",
+      id: uuidv4(), 
       badgeHtml: "Html5",
       badgeCss: "Css",
-      badgeReact: "React",
-      description: "Simula uma pagina do YouTube, sendo possível adicionar seus filmes favoritos. Porém os dados não ficam salvos devido a característica do React.",
-      liveLink: "https://aluratube-tan-five.vercel.app/",
-      githubLink: "https://github.com/mateuslph/aluratube",
+      description: "This is a new description for the AluraTube project. This is a great project.",
+      liveLink: "https://new-aluratube-link.com",
+      githubLink: "https://github.com/new-aluratube-github",
     },
     {
       id: uuidv4(),
-      image: ImageAluraTube,
-      title: "AluraTube 3",
-      badgeHtml: "Html5",
+      title: "Imersão Alura",
       badgeCss: "Css",
-      badgeReact: "React",
-      description: "Simula uma pagina do YouTube, sendo possível adicionar seus filmes favoritos. Porém os dados não ficam salvos devido a característica do React.",
-      liveLink: "https://aluratube-tan-five.vercel.app/",
-      githubLink: "https://github.com/mateuslph/aluratube",
+      description: "This is the new description for the third project.",
+      liveLink: "https://new-project-link.com",
+      githubLink: "https://github.com/new-project-github",
+      image: './assets/images/background-blue-color-square.jpg',
     },
     {
       id: uuidv4(),
-      image: ImageAluraTube,
-      title: "AluraTube 4",
-      badgeHtml: "Html5",
-      badgeCss: "Css",
+      image: './assets/images/background-blue-color-square.jpg',
+      title: "My Portfolio New",
       badgeReact: "React",
-      description: "Simula uma pagina do YouTube, sendo possível adicionar seus filmes favoritos. Porém os dados não ficam salvos devido a característica do React.",
+      description: "This is my personal portfolio, where you can see all my projects, and learn a little bit about me.",
       liveLink: "https://aluratube-tan-five.vercel.app/",
       githubLink: "https://github.com/mateuslph/aluratube",
     },
@@ -168,7 +147,7 @@ function Projects() {
 
   return (
     <div>
-      <ImgBackground>
+      <Background image={ImageBackground}>
         <Conteudo>
           <TituloPrincipal>Projetos</TituloPrincipal>
           <ContainerProjetos>
@@ -176,10 +155,8 @@ function Projects() {
               <ProjectCard key={project.id} project={project} />
             ))}
           </ContainerProjetos>
-        </Conteudo>
-      </ImgBackground>
+          </Conteudo>
+      </Background>
     </div>
   );
 }
-
-export default Projects;

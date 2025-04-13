@@ -1,10 +1,9 @@
 import styled from "styled-components";
-import ImageAluraTube from '../assets/images/screencapture-aluratube.png';
 import { CiGlobe } from "react-icons/ci";
 import { FaGithub } from 'react-icons/fa';
 
 const CardProjetos = styled.div`
-    width: 18rem;
+    
     background-color: #FFF;
     border-radius: 10px;
 
@@ -33,13 +32,13 @@ const BadgeReact = styled.div`
     justify-content: center;
     align-items: center;
     border-radius: 5px;
+    padding: 0 10px;
     font-size: small;
     height: 20px;
-    width: 60px;
     background-color: #0D6EFD;
     color: #fff;
     font-weight: 800;
-`;
+`;    
 
 const BadgeHtml = styled.div`
     display: flex;
@@ -47,13 +46,12 @@ const BadgeHtml = styled.div`
     align-items: center;
     border-radius: 5px;
     font-size: small;
+    padding: 0 10px;
     height: 20px;
-    width: 60px;
     background-color: #DC3545;
     color: #fff;
     font-weight: 800;
-`;
-
+`;    
 const BadgeCss = styled.div`    
     display: flex;
     justify-content: center;
@@ -61,14 +59,14 @@ const BadgeCss = styled.div`
     border-radius: 5px;
     font-size: small;
     height: 20px;
-    width: 60px;
+    padding: 0 10px;
     background-color: #0DCAF0;
     color: #fff;
     font-weight: 800;
 `;
 
 const ImgProject = styled.img`
-    height: 285px;
+    object-fit: cover;
     width: 100%;
     border-radius: 10px 10px 0 0;
 `;
@@ -101,7 +99,7 @@ const IconProjeto = styled.div`
 function ProjectCard({ project }) {
     return (
         <CardProjetos>
-            <ImgProject src={project.image || ImageAluraTube} alt={project.title} />
+            <ImgProject src={project.image} alt={project.title} />
             <CardText>
                 <TituloH5>{project.title}</TituloH5>
                 <Badge>
@@ -114,14 +112,14 @@ function ProjectCard({ project }) {
                     {project.liveLink && (
                         <a href={project.liveLink} target="_blank" rel="noopener noreferrer">
                             <IconProjeto>
-                                <CiGlobe size={32} color="white" />
+                                <CiGlobe size={32}/>
                             </IconProjeto>
                         </a>
                     )}
                     {project.githubLink && (
                         <a href={project.githubLink} target="_blank" rel="noopener noreferrer">
                             <IconProjeto>
-                                <FaGithub size={32} color="white" />
+                                <FaGithub size={32} />
                             </IconProjeto>
                         </a>
                     )}
