@@ -1,15 +1,19 @@
 import styled from "styled-components";
-import ProjectCard from './ProjectCard';
-import ImageBackground from '../assets/images/background-blue-color-square.jpg';
-import { v4 as uuidv4 } from 'uuid';
+import ProjectCard from "./ProjectCard";
+import ImageBackground from "../assets/images/background-blue-color-square.jpg";
+import ImageAluraTube from "../assets/images/image-aluratube.jpg"; // Ajuste esse caminho conforme necessário
+import { v4 as uuidv4 } from "uuid";
 
-const Background = styled.div.attrs(props => ({
-  style: { backgroundImage: `url(${props.image || ImageBackground})` }
+const Background = styled.div.attrs((props) => ({
+  style: { backgroundImage: `url(${props.image || ImageBackground})` },
 }))`
-  background-attachment: fixed;
+  background-attachment: scroll;
+  background-size: cover;
+  background-repeat: no-repeat;
   height: 100vh;
+`;
 
-const Conteudo = styled.div`
+const Conteudo = styled.div`  
   width: 100%;
   display: flex;
   align-items: center;
@@ -17,7 +21,7 @@ const Conteudo = styled.div`
 `;
 
 const TituloPrincipal = styled.h2`
-  font-size: 2.5rem;
+  font-size: 2.2rem;
   color: #E9E9E9;
   border-bottom: 3px solid #E9E9E9;
   width: 90%;
@@ -26,7 +30,6 @@ const TituloPrincipal = styled.h2`
   position: relative;
   margin: 80px 0 120px 0;
   font-weight: 600;
-`;
 `;
 
 const ContainerProjetos = styled.div`
@@ -46,89 +49,44 @@ function Projects() {
       badgeHtml: "Html5",
       badgeCss: "Css",
       badgeReact: "React",
-      description: "Simula uma pagina do YouTube, sendo possível adicionar seus filmes favoritos. Porém os dados não ficam salvos devido a característica do React.",
+      description:
+        "Simula uma página do YouTube, sendo possível adicionar seus filmes favoritos. Porém os dados não ficam salvos devido à característica do React.",
       liveLink: "https://aluratube-tan-five.vercel.app/",
       githubLink: "https://github.com/mateuslph/aluratube",
     },
-
     {
-      id: uuidv4(), 
+      id: uuidv4(),
       badgeHtml: "Html5",
       badgeCss: "Css",
-      description: "This is a new description for the AluraTube project. This is a great project.",
+      description: "This is a new description for the AluraTube project.",
       liveLink: "https://new-aluratube-link.com",
       githubLink: "https://github.com/new-aluratube-github",
     },
     {
       id: uuidv4(),
-      title: "Imersão Alura",
       badgeCss: "Css",
       description: "This is the new description for the third project.",
       liveLink: "https://new-project-link.com",
       githubLink: "https://github.com/new-project-github",
-      image: './assets/images/background-blue-color-square.jpg',
+      image: ImageBackground,
     },
     {
       id: uuidv4(),
-      image: './assets/images/background-blue-color-square.jpg',
-      title: "My Portfolio New",
+      image: ImageBackground,
       badgeReact: "React",
-      description: "This is my personal portfolio, where you can see all my projects, and learn a little bit about me.",
+      description:
+        "This is my personal portfolio, where you can see all my projects.",
       liveLink: "https://aluratube-tan-five.vercel.app/",
       githubLink: "https://github.com/mateuslph/aluratube",
     },
     {
       id: uuidv4(),
-      image: ImageAluraTube,
-      title: "AluraTube 5",
+      image: ImageBackground,
       badgeHtml: "Html5",
       badgeCss: "Css",
       badgeReact: "React",
-      description: "Simula uma pagina do YouTube, sendo possível adicionar seus filmes favoritos. Porém os dados não ficam salvos devido a característica do React.",
-      liveLink: "https://aluratube-tan-five.vercel.app/",
-      githubLink: "https://github.com/mateuslph/aluratube",
-    },
-    {
-      id: uuidv4(),
-      image: ImageAluraTube,
-      title: "AluraTube 6",
-      badgeHtml: "Html5",
-      badgeCss: "Css",
-      badgeReact: "React",
-      description: "Simula uma pagina do YouTube, sendo possível adicionar seus filmes favoritos. Porém os dados não ficam salvos devido a característica do React.",
-      liveLink: "https://aluratube-tan-five.vercel.app/",
-      githubLink: "https://github.com/mateuslph/aluratube",
-    },
-    {
-      id: uuidv4(),
-      image: ImageAluraTube,
-      title: "AluraTube 7",
-      badgeHtml: "Html5",
-      badgeCss: "Css",
-      badgeReact: "React",
-      description: "Simula uma pagina do YouTube, sendo possível adicionar seus filmes favoritos. Porém os dados não ficam salvos devido a característica do React.",
-      liveLink: "https://aluratube-tan-five.vercel.app/",
-      githubLink: "https://github.com/mateuslph/aluratube",
-    },
-    {
-      id: uuidv4(),
-      image: ImageAluraTube,
-      title: "AluraTube 8",
-      badgeHtml: "Html5",
-      badgeCss: "Css",
-      badgeReact: "React",
-      description: "Simula uma pagina do YouTube, sendo possível adicionar seus filmes favoritos. Porém os dados não ficam salvos devido a característica do React.",
-      liveLink: "https://aluratube-tan-five.vercel.app/",
-      githubLink: "https://github.com/mateuslph/aluratube",
-    },
-    {
-      id: uuidv4(),
-      image: ImageAluraTube,
-      title: "AluraTube 9",
-      badgeHtml: "Html5",
-      badgeCss: "Css",
-      badgeReact: "React",
-      description: "Simula uma pagina do YouTube, sendo possível adicionar seus filmes favoritos. Porém os dados não ficam salvos devido a característica do React.",
+      description:
+        "Simula uma página do YouTube, sendo possível adicionar seus filmes favoritos.",
       liveLink: "https://aluratube-tan-five.vercel.app/",
       githubLink: "https://github.com/mateuslph/aluratube",
     },
@@ -139,7 +97,8 @@ function Projects() {
       badgeHtml: "Html5",
       badgeCss: "Css",
       badgeReact: "React",
-      description: "Simula uma pagina do YouTube, sendo possível adicionar seus filmes favoritos. Porém os dados não ficam salvos devido a característica do React.",
+      description:
+        "Simula uma página do YouTube, sendo possível adicionar seus filmes favoritos.",
       liveLink: "https://aluratube-tan-five.vercel.app/",
       githubLink: "https://github.com/mateuslph/aluratube",
     },
@@ -155,8 +114,10 @@ function Projects() {
               <ProjectCard key={project.id} project={project} />
             ))}
           </ContainerProjetos>
-          </Conteudo>
+        </Conteudo>
       </Background>
     </div>
   );
 }
+
+export default Projects;
