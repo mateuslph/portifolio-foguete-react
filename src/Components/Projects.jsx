@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import ProjectCard from "./ProjectCard";
 import ImageBackground from "../assets/images/background-blue-color-square.jpg";
-import ImageAluraTube from "../assets/images/screencapture-aluratube.png";
+import ImageAluraTube from "../assets/images/screencapture-aluratube.png"; // Ajuste esse caminho conforme necessário
 import { v4 as uuidv4 } from "uuid";
 
 const Background = styled.div.attrs((props) => ({
@@ -10,7 +10,6 @@ const Background = styled.div.attrs((props) => ({
   background-attachment: scroll;
   background-size: cover;
   background-repeat: no-repeat;
-  height: 100vh;
 `;
 
 const Conteudo = styled.div`  
@@ -45,7 +44,7 @@ function Projects() {
   const projectsData = [
     {
       id: uuidv4(),
-      image: ImageAluraTube, // Updated to the correct image
+      image: ImageAluraTube,
       badgeHtml: "Html5",
       badgeCss: "Css",
       badgeReact: "React",
@@ -92,7 +91,7 @@ function Projects() {
     },
     {
       id: uuidv4(),
-      image: ImageAluraTube, // Updated to the correct image
+      image: ImageAluraTube,
       title: "AluraTube 10",
       badgeHtml: "Html5",
       badgeCss: "Css",
