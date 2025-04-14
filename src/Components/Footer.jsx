@@ -269,13 +269,13 @@ function RenderFooter() {
                         <li>
                             <StyledFooterTitle>Produtos</StyledFooterTitle>
                          </li>
-                        <li> <a href="#" className="footer-link">App</a>
+                        <li> <button className="footer-link">App</button>
                         </li>
                         <li>
-                            <a href="#" className="footer-link">Desktop</a>
+                            <button className="footer-link">Desktop</button>
                         </li>
                         <li>
-                            <a href="#" className="footer-link">Cloud</a>
+                            <button className="footer-link">Cloud</button>
                         </li>
                     </FooterList>
                     </div>
