@@ -107,7 +107,7 @@ function Projects() {
     <div>
       <Background image={ImageBackground}>
         <Conteudo>
-          <TituloPrincipal>Projetos</TituloPrincipal>
+          <TituloPrincipal>Projeto</TituloPrincipal>
           <ContainerProjetos>
             {projectsData.map((project) => (
               <ProjectCard key={project.id} project={project} />
