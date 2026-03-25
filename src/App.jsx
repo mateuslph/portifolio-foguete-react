@@ -1,10 +1,9 @@
 import Footer from './Components/Footer';
 import Header from './Components/Header';
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
-
-{/*import Home from './Components/Home';
+import Home from './Components/Home';
 import Projects from './Components/Projects';
-import About from './Components/About';*/}
+import About from './Components/About';
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 
 function App() {
   return (
